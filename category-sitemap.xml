@@ -7,8 +7,15 @@
     </url>
 
     <url>
-        <loc>www.huchan.xyz/categories/webservice/</loc>
-        <lastmod>2017-03-09T14:48:13.859Z</lastmod>
+        <loc>www.huchan.xyz/categories/Webservice/</loc>
+        <lastmod>2017-03-10T07:16:31.187Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>www.huchan.xyz/categories/Webservice/Restful/</loc>
+        <lastmod>2017-03-10T07:16:31.187Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
