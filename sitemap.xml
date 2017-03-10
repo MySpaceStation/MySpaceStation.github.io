@@ -2,23 +2,23 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <sitemap>
-        <loc>www.huchan.xyz/post-sitemap.xml</loc>
-        <lastmod>2017-03-10T15:25:14.651Z</lastmod>
+        <loc>http://www.huchan.xyz/post-sitemap.xml</loc>
+        <lastmod>2017-03-10T15:50:36.247Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>www.huchan.xyz/page-sitemap.xml</loc>
+        <loc>http://www.huchan.xyz/page-sitemap.xml</loc>
         <lastmod>2017-03-08T15:09:01.608Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>www.huchan.xyz/category-sitemap.xml</loc>
-        <lastmod>2017-03-10T09:30:01.752Z</lastmod>
+        <loc>http://www.huchan.xyz/category-sitemap.xml</loc>
+        <lastmod>2017-03-10T15:25:14.651Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>www.huchan.xyz/tag-sitemap.xml</loc>
-        <lastmod>2017-03-10T09:30:01.752Z</lastmod>
+        <loc>http://www.huchan.xyz/tag-sitemap.xml</loc>
+        <lastmod>2017-03-10T15:25:14.651Z</lastmod>
     </sitemap>
 
 </sitemapindex>

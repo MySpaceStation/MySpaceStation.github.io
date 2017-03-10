@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>www.huchan.xyz</loc>
+        <loc>http://www.huchan.xyz</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>www.huchan.xyz/about/</loc>
+        <loc>http://www.huchan.xyz/about/</loc>
         <lastmod>2017-03-08T15:09:01.608Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>www.huchan.xyz/tags/</loc>
+        <loc>http://www.huchan.xyz/tags/</loc>
         <lastmod>2017-03-08T13:27:13.542Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>www.huchan.xyz//404.html</loc>
+        <loc>http://www.huchan.xyz//404.html</loc>
         <lastmod>2017-03-08T13:26:16.531Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
