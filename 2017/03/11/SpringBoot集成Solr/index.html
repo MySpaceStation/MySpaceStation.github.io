@@ -15,19 +15,16 @@
 
 
 
-<meta name="description" content="基于springboot+jersey+swagger的Restful风格webservice配置教程，自动生成接口文档！">
+<meta name="description" content="Solr6.4版本配置以及Spring Data for Apache Solr教程！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jersey+swagger的集成">
-<meta property="og:url" content="http://www.huchan.xyz/2017/03/02/webservice/index.html">
+<meta property="og:title" content="SpringBoot集成Solr">
+<meta property="og:url" content="http://www.huchan.xyz/2017/03/11/SpringBoot集成Solr/index.html">
 <meta property="og:site_name" content="小寒的博客">
-<meta property="og:description" content="基于springboot+jersey+swagger的Restful风格webservice配置教程，自动生成接口文档！">
-<meta property="og:image" content="http://www.huchan.xyz/img/jax-rs.png">
-<meta property="og:image" content="http://www.huchan.xyz/img/swagger-restful.png">
-<meta property="og:updated_time" content="2017-03-11T04:08:32.238Z">
+<meta property="og:description" content="Solr6.4版本配置以及Spring Data for Apache Solr教程！">
+<meta property="og:updated_time" content="2017-03-11T04:06:56.380Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jersey+swagger的集成">
-<meta name="twitter:description" content="基于springboot+jersey+swagger的Restful风格webservice配置教程，自动生成接口文档！">
-<meta name="twitter:image" content="http://www.huchan.xyz/img/jax-rs.png">
+<meta name="twitter:title" content="SpringBoot集成Solr">
+<meta name="twitter:description" content="Solr6.4版本配置以及Spring Data for Apache Solr教程！">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -59,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>jersey+swagger的集成 | 小寒的博客</title>
+<title>SpringBoot集成Solr | 小寒的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -218,11 +215,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-webservice" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-SpringBoot集成Solr" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/02/webservice/" class="article-date">
-      <time datetime="2017-03-01T16:52:05.000Z" itemprop="datePublished">2017-03-02</time>
+      <a href="/2017/03/11/SpringBoot集成Solr/" class="article-date">
+      <time datetime="2017-03-11T02:40:53.000Z" itemprop="datePublished">2017-03-11</time>
 </a>
 
 
@@ -237,7 +234,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      jersey+swagger的集成
+      SpringBoot集成Solr
     </h1>
   
 
@@ -246,13 +243,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Webservice/">Webservice</a><a class="article-category-link" href="/categories/Webservice/Restful/">Restful</a>
+    <a class="article-category-link" href="/categories/全文检索/">全文检索</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jersey/">Jersey</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swagger/">Swagger</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apahce-Solr/">Apahce Solr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -262,16 +259,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote><h2 id="添加maven依赖"><a href="#添加maven依赖" class="headerlink" title="添加maven依赖"></a>添加maven依赖</h2>undefined
-<h2 id="yml配置"><a href="#yml配置" class="headerlink" title="yml配置"></a>yml配置</h2>undefined
-<h2 id="jersey配置"><a href="#jersey配置" class="headerlink" title="jersey配置"></a>jersey配置</h2>undefined
-<h2 id="swagger配置"><a href="#swagger配置" class="headerlink" title="swagger配置"></a>swagger配置</h2>undefined
-<h2 id="jax-rs-Restful配置"><a href="#jax-rs-Restful配置" class="headerlink" title="jax-rs Restful配置"></a>jax-rs Restful配置</h2><h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3>undefined
-<h3 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h3><p><em>路径</em>：resource/static/index.html<br>undefined</p>
-<h3 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h3><p><em>访问路径: locahost:520</em><br><img src="/img/jax-rs.png" class="博客园" title="jax-rs接口API效果预览图"></p>
-<h2 id="SpringMVC-Restful配置"><a href="#SpringMVC-Restful配置" class="headerlink" title="SpringMVC Restful配置"></a>SpringMVC Restful配置</h2><h3 id="Demo-1"><a href="#Demo-1" class="headerlink" title="Demo"></a>Demo</h3>undefined
-<h3 id="效果预览-1"><a href="#效果预览-1" class="headerlink" title="效果预览"></a>效果预览</h3><p><em>访问路径: localhost:520/swagger-ui.html</em><br><img src="/img/swagger-restful.png" class="博客园" title="SpringMVC-Restful效果预览图"></p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><em>以上是博主整理的，可能会有遗漏，欢迎反馈问题。</em></p>
+        <blockquote><h2 id="Apache-Solr"><a href="#Apache-Solr" class="headerlink" title="Apache Solr"></a>Apache Solr</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><ul>
+<li>Apache Solr链接地址：<a href="http://www-eu.apache.org/dist/lucene/solr/6.4.2/" target="_blank" rel="external">http://www-eu.apache.org/dist/lucene/solr/6.4.2/</a></li>
+<li>选择solr-6.4.2.zip<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3></li>
+<li>解压solr-6.4.2.zip</li>
+<li>找到安装的位置，在bin目录中, shift + 鼠标右键选择在此处打开命令窗口</li>
+<li>输入solr start</li>
+<li>访问路径：<a href="http://localhost:8983/solr" target="_blank" rel="external">http://localhost:8983/solr</a><h2 id="索引数据"><a href="#索引数据" class="headerlink" title="索引数据"></a>索引数据</h2><h3 id="索引books-csv"><a href="#索引books-csv" class="headerlink" title="索引books.csv"></a>索引books.csv</h3><h3 id="添加索引字段"><a href="#添加索引字段" class="headerlink" title="添加索引字段"></a>添加索引字段</h3><h3 id="访问索引文档"><a href="#访问索引文档" class="headerlink" title="访问索引文档"></a>访问索引文档</h3><h2 id="SpringBoot集成Solr"><a href="#SpringBoot集成Solr" class="headerlink" title="SpringBoot集成Solr"></a>SpringBoot集成Solr</h2><h3 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h3><h3 id="yml配置"><a href="#yml配置" class="headerlink" title="yml配置"></a>yml配置</h3><h2 id="Spring-Data-for-Apache-Solr"><a href="#Spring-Data-for-Apache-Solr" class="headerlink" title="Spring Data for Apache Solr"></a>Spring Data for Apache Solr</h2><h3 id="Solr配置"><a href="#Solr配置" class="headerlink" title="Solr配置"></a>Solr配置</h3><h3 id="Spring-Data"><a href="#Spring-Data" class="headerlink" title="Spring Data"></a>Spring Data</h3><h2 id="Rest-API测试"><a href="#Rest-API测试" class="headerlink" title="Rest API测试"></a>Rest API测试</h2><h3 id="SolrQuery"><a href="#SolrQuery" class="headerlink" title="SolrQuery"></a>SolrQuery</h3><h3 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h3><h3 id="SolrRepositories"><a href="#SolrRepositories" class="headerlink" title="SolrRepositories"></a>SolrRepositories</h3><h3 id="效果预览-1"><a href="#效果预览-1" class="headerlink" title="效果预览"></a>效果预览</h3><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2></li>
+</ul>
 <footer><strong>小寒</strong><cite><a href="http://www.huchan.xyz">www.huchan.xyz</a></cite></footer></blockquote>
 
       
@@ -284,12 +279,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
+        
+            <div id="article-nav-older" class="article-nav-title">
                 <a href="/2017/03/10/设计模式六大原则/">
                     设计模式六大原则
                 </a>
             </div>
-        
         
     </nav>
 
@@ -299,7 +294,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加maven依赖"><span class="toc-number">1.</span> <span class="toc-text">添加maven依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yml配置"><span class="toc-number">2.</span> <span class="toc-text">yml配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jersey配置"><span class="toc-number">3.</span> <span class="toc-text">jersey配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swagger配置"><span class="toc-number">4.</span> <span class="toc-text">swagger配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jax-rs-Restful配置"><span class="toc-number">5.</span> <span class="toc-text">jax-rs Restful配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo"><span class="toc-number">5.1.</span> <span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#index-html"><span class="toc-number">5.2.</span> <span class="toc-text">index.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果预览"><span class="toc-number">5.3.</span> <span class="toc-text">效果预览</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringMVC-Restful配置"><span class="toc-number">6.</span> <span class="toc-text">SpringMVC Restful配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo-1"><span class="toc-number">6.1.</span> <span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果预览-1"><span class="toc-number">6.2.</span> <span class="toc-text">效果预览</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">7.</span> <span class="toc-text">结语</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Apache-Solr"><span class="toc-number">1.</span> <span class="toc-text">Apache Solr</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载"><span class="toc-number">1.1.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">1.2.</span> <span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#索引数据"><span class="toc-number">2.</span> <span class="toc-text">索引数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#索引books-csv"><span class="toc-number">2.1.</span> <span class="toc-text">索引books.csv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加索引字段"><span class="toc-number">2.2.</span> <span class="toc-text">添加索引字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问索引文档"><span class="toc-number">2.3.</span> <span class="toc-text">访问索引文档</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringBoot集成Solr"><span class="toc-number">3.</span> <span class="toc-text">SpringBoot集成Solr</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加依赖"><span class="toc-number">3.1.</span> <span class="toc-text">添加依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yml配置"><span class="toc-number">3.2.</span> <span class="toc-text">yml配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Data-for-Apache-Solr"><span class="toc-number">4.</span> <span class="toc-text">Spring Data for Apache Solr</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Solr配置"><span class="toc-number">4.1.</span> <span class="toc-text">Solr配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Data"><span class="toc-number">4.2.</span> <span class="toc-text">Spring Data</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rest-API测试"><span class="toc-number">5.</span> <span class="toc-text">Rest API测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SolrQuery"><span class="toc-number">5.1.</span> <span class="toc-text">SolrQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果预览"><span class="toc-number">5.2.</span> <span class="toc-text">效果预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SolrRepositories"><span class="toc-number">5.3.</span> <span class="toc-text">SolrRepositories</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果预览-1"><span class="toc-number">5.4.</span> <span class="toc-text">效果预览</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">6.</span> <span class="toc-text">结语</span></a></li></ol>
         
     </div>
     <style>
@@ -335,7 +330,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"jersey+swagger的集成　| 小寒的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"SpringBoot集成Solr　| 小寒的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -351,7 +346,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/02/webservice/" data-title="jersey+swagger的集成" data-url="http://www.huchan.xyz/2017/03/02/webservice/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/11/SpringBoot集成Solr/" data-title="SpringBoot集成Solr" data-url="http://www.huchan.xyz/2017/03/11/SpringBoot集成Solr/"></div>
     <script>
         var duoshuoQuery = {short_name:"myspacestation"};
         var loadComment = function(){
@@ -374,15 +369,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/03/10/设计模式六大原则/" title="上一篇: 设计模式六大原则">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/03/10/设计模式六大原则/" title="下一篇: 设计模式六大原则">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 

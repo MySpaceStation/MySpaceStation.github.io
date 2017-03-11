@@ -7,22 +7,29 @@
     </url>
 
     <url>
-        <loc>http://www.huchan.xyz/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-        <lastmod>2017-03-10T15:25:14.651Z</lastmod>
+        <loc>http://www.huchan.xyz/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/</loc>
+        <lastmod>2017-03-11T04:06:56.380Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.huchan.xyz/categories/Webservice/</loc>
-        <lastmod>2017-03-10T15:50:36.247Z</lastmod>
+        <lastmod>2017-03-11T04:08:32.238Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.huchan.xyz/categories/Webservice/Restful/</loc>
-        <lastmod>2017-03-10T15:50:36.247Z</lastmod>
+        <lastmod>2017-03-11T04:08:32.238Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.huchan.xyz/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+        <lastmod>2017-03-11T04:11:26.157Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
