@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://www.huchan.xyz/article_source/solr/img/name_xml.png">
 <meta property="og:image" content="http://www.huchan.xyz/article_source/solr/img/SolrQuery.png">
 <meta property="og:image" content="http://www.huchan.xyz/article_source/solr/img/SolrRepositories.png">
-<meta property="og:updated_time" content="2017-03-11T12:54:15.913Z">
+<meta property="og:updated_time" content="2017-03-11T12:54:30.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot集成Solr">
 <meta name="twitter:description" content="Solr6.4版本配置以及Spring Data for Apache Solr教程！">
@@ -299,6 +299,7 @@
 <h3 id="SolrRepositories"><a href="#SolrRepositories" class="headerlink" title="SolrRepositories"></a>SolrRepositories</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/test"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestController</span> </span>&#123;</div><div class="line">    <span class="meta">@Resource</span></div><div class="line">    <span class="keyword">private</span> SolrBookRepository solrBookRepository;</div><div class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/showRepository"</span>, method = RequestMethod.POST)</div><div class="line">    <span class="meta">@ApiOperation</span>(value = <span class="string">"测试接口"</span>, notes = <span class="string">"测试接口详细描述"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;BookVO&gt; <span class="title">showRepository</span><span class="params">(@ApiParam(required = <span class="keyword">true</span>, name = <span class="string">"name"</span>, value = <span class="string">"书名"</span>)</span> @<span class="title">RequestParam</span><span class="params">(name = <span class="string">"name"</span>)</span> String stuName) </span>&#123;</div><div class="line">        <span class="keyword">return</span> solrBookRepository.findByName(stuName);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="效果预览-1"><a href="#效果预览-1" class="headerlink" title="效果预览"></a>效果预览</h3><p>接口返回的数据测试如图。<br><img src="/article_source/solr/img/SolrRepositories.png" class="接口数据测试视图" title="接口数据测试视图"></p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></p>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/11/SpringBoot集成Solr/">http://www.huchan.xyz/2017/03/11/SpringBoot集成Solr/</a> </p>
 
       
     </div>
