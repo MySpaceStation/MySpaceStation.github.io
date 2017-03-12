@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huchan.xyz/"/>
-  <updated>2017-03-11T12:54:30.209Z</updated>
+  <updated>2017-03-12T05:26:34.866Z</updated>
   <id>http://www.huchan.xyz/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>uml类图</title>
+    <link href="http://www.huchan.xyz/2017/03/12/uml%E7%B1%BB%E5%9B%BE/"/>
+    <id>http://www.huchan.xyz/2017/03/12/uml类图/</id>
+    <published>2017-03-12T03:44:26.000Z</published>
+    <updated>2017-03-12T05:26:34.866Z</updated>
+    
+    <summary type="html">
+    
+      uml类图之间关系总结！
+    
+    </summary>
+    
+      <category term="uml" scheme="http://www.huchan.xyz/categories/uml/"/>
+    
+    
+      <category term="总结" scheme="http://www.huchan.xyz/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="uml类图" scheme="http://www.huchan.xyz/tags/uml%E7%B1%BB%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringBoot集成Solr</title>

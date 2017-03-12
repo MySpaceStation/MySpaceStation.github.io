@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="小寒" />
+
+
+
+<meta name="description" content="uml类图之间关系总结！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="uml类图">
+<meta property="og:url" content="http://www.huchan.xyz/2017/03/12/uml类图/index.html">
+<meta property="og:site_name" content="小寒的博客">
+<meta property="og:description" content="uml类图之间关系总结！">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/uml/img/dependence.jpg">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/uml/img/generalization.jpg">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/uml/img/association_1vsN.jpg">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/uml/img/association_direct.jpg">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/uml/img/association_self.jpg">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/uml/img/aggregation.jpg">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/uml/img/composition.jpg">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/uml/img/implementation.jpg">
+<meta property="og:updated_time" content="2017-03-12T05:26:34.866Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="uml类图">
+<meta name="twitter:description" content="uml类图之间关系总结！">
+<meta name="twitter:image" content="http://www.huchan.xyz/article_source/uml/img/dependence.jpg">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="小寒的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/blog_favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>uml类图 | 小寒的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58c413620621a063"></script>
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/headPortrait_2.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">小寒</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">IT菜鸟成长记</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">个人介绍</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:huchanmilk@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/MySpaceStation" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/MySpaceStation">GitHub</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">人生就像一个new project，充满着各种BUG！</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">小寒</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/headPortrait_2.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">小寒</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">IT菜鸟成长记</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">个人介绍</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:huchanmilk@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/MySpaceStation" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-uml类图" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/12/uml类图/" class="article-date">
+      <time datetime="2017-03-12T03:44:26.000Z" itemprop="datePublished">2017-03-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      uml类图
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/uml/">uml</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/uml类图/">uml类图</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>uml类图关系表示方法：</p>
+<ul>
+<li>UML中关系表示，*表示所有，1表示1个，0..*表示至少有0个，1..*表示至少有1个，0..1表示0个或1个。</li>
+<li>依赖：虚线表示</li>
+<li>泛化(继承)：用实线三角符号</li>
+<li>实现接口：用虚线三角符号</li>
+<li>聚合：空心菱形</li>
+<li>组合：实心菱形</li>
+<li>双向关联：默认情况下，关联是双向的</li>
+<li>单向关联：一般用带箭头的实线表示<h2 id="依赖关系Dependence"><a href="#依赖关系Dependence" class="headerlink" title="依赖关系Dependence"></a>依赖关系<em>Dependence</em></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3>依赖关系<em>Dependence</em>：假设<em>A</em>类的变化引起了<em>B</em>类的变化，则<em>B</em>依赖于<em>A</em>。<h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><img src="/article_source/uml/img/dependence.jpg" class="依赖关系类图" title="依赖关系类图">
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">diver</span><span class="params">(Car car)</span></span>&#123;</div><div class="line">     car.move();</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li><em>A</em>类是<em>B</em>类中的（某方法中的）局部变量</li>
+<li><em>A</em>类是<em>B</em>类方法当中的一个参数</li>
+<li><em>A</em>类向<em>B</em>类发消息时，从而影响<em>B</em>类发生变化<h2 id="泛化关系Generalization"><a href="#泛化关系Generalization" class="headerlink" title="泛化关系Generalization"></a>泛化关系<em>Generalization</em></h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3>泛化关系<em>Generalization</em>：<em>A</em>是<em>B</em>和<em>C</em>的父类，<em>B，C</em>具有公共类（父类）<em>A</em>，说明<em>A</em>是<em>B，C</em>的一般化泛化。</li>
+<li>泛化关系也就是继承<em>is-a-kind=of</em>关系，泛化关系用于描述父类和子类之间的关系，父类称为基类或超类，子类又称为派生类</li>
+<li>代码实现时，使用面向对象的继承机制来实现泛化关系<h3 id="类图-1"><a href="#类图-1" class="headerlink" title="类图"></a>类图</h3><img src="/article_source/uml/img/generalization.jpg" class="泛化关系类图" title="泛化关系类图">
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</div><div class="line">  <span class="keyword">public</span> String name;</div><div class="line">  <span class="keyword">public</span> <span class="keyword">int</span> age;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span></span>;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span></span>;</div><div class="line">  ...getter,setter...</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</div><div class="line">   ...</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Teacher</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>子类与父类应该完全一致，父类拥有的属性、操作，子类应该都有</li>
+<li>子类中除了与分类一致的信息以外，还包括额外的信息</li>
+<li>可以使用父类的实例的地方，也能使用子类的实例<h2 id="关联关系Association"><a href="#关联关系Association" class="headerlink" title="关联关系Association"></a>关联关系<em>Association</em></h2><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3>关联关系<em>Association</em>：类之间的关联（数据库设计一对多，多对多？），如客户和订单，每个订单对应特定的客户，每个客户对应一些特定的订单。</li>
+<li>关联关系是类与类之间常用的一种关系，它是一种结构化关系，用于表示一类对象与另一类对象之间有联系</li>
+<li>通常一个类的对象作为另一个类的属性</li>
+<li>在使用类图表示关联关系时可以在关联线上标注角色名<h3 id="类图-2"><a href="#类图-2" class="headerlink" title="类图"></a>类图</h3><img src="/article_source/uml/img/association_1vsN.jpg" class="Customer与Order一对多类图" title="Customer与Order一对多类图">
+<img src="/article_source/uml/img/association_direct.jpg" class="Customer与Address单向关联类图" title="Customer与Address单向关联类图">
+<img src="/article_source/uml/img/association_self.jpg" class="自关联类图" title="自关联类图">
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3>Customer与Order一对多<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Customer</span></span>&#123;</div><div class="line">  <span class="keyword">private</span> List&lt;Order&gt; orderList;</div><div class="line">  ...</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Order</span></span>&#123;</div><div class="line">  <span class="keyword">private</span> Customer customer;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Customer与Address单向关联<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Customer</span></span>&#123;</div><div class="line">  <span class="keyword">private</span> Address address;</div><div class="line">  ...</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Address</span></span>&#123;</div><div class="line">   ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>自关联<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span></span>&#123;</div><div class="line">  <span class="keyword">private</span> Node node;</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>自关联：类的对象属性为该类的本身，一般为树形结构</li>
+<li>重要性关联：重数性关联关系又称为多重性关联关系<em>Multiplicity</em>，表示一个类的对象与另一个类的对象连接的个数</li>
+<li>数据库表设计会涉及到一对一，一对多，多对多<h2 id="聚合关系Aggregation"><a href="#聚合关系Aggregation" class="headerlink" title="聚合关系Aggregation"></a>聚合关系<em>Aggregation</em></h2><h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3>聚合关系<em>Aggregation</em>：表示的是整体和部分的关系，但是整体和部分是可以分开的。<h3 id="类图-3"><a href="#类图-3" class="headerlink" title="类图"></a>类图</h3><img src="/article_source/uml/img/aggregation.jpg" class="聚合关系类图" title="聚合关系类图">
+<h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span>&#123;</div><div class="line">  <span class="keyword">private</span> Monitor monitor;</div><div class="line">  <span class="keyword">private</span> Mouse mouse;</div><div class="line">  <span class="keyword">private</span> Keboard keyboard;</div><div class="line">  ...</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Computer</span><span class="params">(Monitor monitor,Mouse mouse,Keboard keyboard)</span></span>&#123;</div><div class="line">    <span class="keyword">this</span>.monitor = monitor;</div><div class="line">    <span class="keyword">this</span>.mouse = mouse;</div><div class="line">    <span class="keyword">this</span>.keyboard = keyboard;</div><div class="line">  &#125;</div><div class="line">  ...</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Monitor</span></span>&#123;</div><div class="line">  ...</div><div class="line">&#125;</div><div class="line">...</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="小结-3"><a href="#小结-3" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>聚合关系Aggregation聚合表示类之间整体与部分的关系。比如一台完整的电脑包含显示器、主机、键盘、鼠标、耳机等</li>
+<li>在聚合关系Aggregation中部分可以脱离整体而单独存在，即成员类是可以脱离整体类单独存在的<h2 id="组合关系Composition"><a href="#组合关系Composition" class="headerlink" title="组合关系Composition"></a>组合关系<em>Composition</em></h2><h3 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a>定义</h3>组合关系<em>Composition</em>：整体与部分的关系，整体与部分不可分开。<h3 id="类图-4"><a href="#类图-4" class="headerlink" title="类图"></a>类图</h3><img src="/article_source/uml/img/composition.jpg" class="组合关系类图" title="组合关系类图">
+<h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Head</span></span>&#123;</div><div class="line">  <span class="keyword">private</span> Mouth mouth;</div><div class="line">  <span class="keyword">private</span> Eye eye;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Head</span><span class="params">()</span></span>&#123;</div><div class="line">    mouth = <span class="keyword">new</span> Mouth();</div><div class="line">    eye = <span class="keyword">new</span> Eye();</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mouth</span></span>&#123;</div><div class="line">  ...</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Eye</span></span>&#123;</div><div class="line">   ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="小结-4"><a href="#小结-4" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>组合关系<em>Composition</em>组合也表示类之间整体与部分的关系，但是整体与部分具有统一的生存期。一旦整体对象不存在，部分对象也将不存在。部分对象与整体象具有同生共死的关系</li>
+<li>整体类可以控制成员类的生命周期，即成员类的存在依赖于整体类<h2 id="实现关系Implemenation"><a href="#实现关系Implemenation" class="headerlink" title="实现关系Implemenation"></a>实现关系<em>Implemenation</em></h2><h3 id="定义-5"><a href="#定义-5" class="headerlink" title="定义"></a>定义</h3>实现关系<em>Implementation</em>：是用来规定接口和实现接口的类或者构建结构的关系，接口是操作的集合，而这些操作用于规定类或者构建的一种服务。<h3 id="类图-5"><a href="#类图-5" class="headerlink" title="类图"></a>类图</h3><img src="/article_source/uml/img/implementation.jpg" class="实现关系类图" title="实现关系类图">
+<h3 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Todo</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span></span>;</div><div class="line">  <span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="title">implement</span> <span class="title">Todo</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span></span>&#123;</div><div class="line">    ...</div><div class="line">  &#125;</div><div class="line">   <span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</div><div class="line">      ...</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Animals</span> <span class="title">implement</span> <span class="title">Todo</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span></span>&#123;</div><div class="line">    ...</div><div class="line">  &#125;</div><div class="line">  <span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</div><div class="line">    ...</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="小结-5"><a href="#小结-5" class="headerlink" title="小结"></a>小结</h3><p>接口是实现软件松耦合的重要手段，方便维护，拓展。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></p>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/12/uml类图/">http://www.huchan.xyz/2017/03/12/uml类图/</a> </p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/03/11/SpringBoot集成Solr/">
+                    SpringBoot集成Solr
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖关系Dependence"><span class="toc-number">2.</span> <span class="toc-text">依赖关系Dependence</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义"><span class="toc-number">2.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类图"><span class="toc-number">2.2.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-number">2.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结"><span class="toc-number">2.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛化关系Generalization"><span class="toc-number">3.</span> <span class="toc-text">泛化关系Generalization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-1"><span class="toc-number">3.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类图-1"><span class="toc-number">3.2.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例-1"><span class="toc-number">3.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结-1"><span class="toc-number">3.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关联关系Association"><span class="toc-number">4.</span> <span class="toc-text">关联关系Association</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-2"><span class="toc-number">4.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类图-2"><span class="toc-number">4.2.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例-2"><span class="toc-number">4.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结-2"><span class="toc-number">4.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#聚合关系Aggregation"><span class="toc-number">5.</span> <span class="toc-text">聚合关系Aggregation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-3"><span class="toc-number">5.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类图-3"><span class="toc-number">5.2.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例-3"><span class="toc-number">5.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结-3"><span class="toc-number">5.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组合关系Composition"><span class="toc-number">6.</span> <span class="toc-text">组合关系Composition</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-4"><span class="toc-number">6.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类图-4"><span class="toc-number">6.2.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例-4"><span class="toc-number">6.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结-4"><span class="toc-number">6.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现关系Implemenation"><span class="toc-number">7.</span> <span class="toc-text">实现关系Implemenation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-5"><span class="toc-number">7.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类图-5"><span class="toc-number">7.2.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例-5"><span class="toc-number">7.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结-5"><span class="toc-number">7.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">8.</span> <span class="toc-text">结语</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+
+    
+        <div class="addthis_sharing_toolbox"></div>
+    
+</div>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/12/uml类图/" data-title="uml类图" data-url="http://www.huchan.xyz/2017/03/12/uml类图/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"myspacestation"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/03/11/SpringBoot集成Solr/" title="下一篇: SpringBoot集成Solr">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/uml类图/">uml类图</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/webservice/">jersey+swagger的集成</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i>
+                2017 小寒
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                      <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                      </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+            
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
