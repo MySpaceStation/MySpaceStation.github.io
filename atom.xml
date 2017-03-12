@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huchan.xyz/"/>
-  <updated>2017-03-12T05:26:34.866Z</updated>
+  <updated>2017-03-12T17:27:23.058Z</updated>
   <id>http://www.huchan.xyz/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringBoot实现jsr-303验证规范</title>
+    <link href="http://www.huchan.xyz/2017/03/12/SpringBoot%E5%AE%9E%E7%8E%B0jsr-303%E9%AA%8C%E8%AF%81%E8%A7%84%E8%8C%83/"/>
+    <id>http://www.huchan.xyz/2017/03/12/SpringBoot实现jsr-303验证规范/</id>
+    <published>2017-03-12T12:08:08.000Z</published>
+    <updated>2017-03-12T17:27:23.058Z</updated>
+    
+    <summary type="html">
+    
+      SpringBoot实现jsr-303验证规范初步教程！
+    
+    </summary>
+    
+      <category term="Hibernate Validator" scheme="http://www.huchan.xyz/categories/Hibernate-Validator/"/>
+    
+    
+      <category term="SpringBoot" scheme="http://www.huchan.xyz/tags/SpringBoot/"/>
+    
+      <category term="Jsr-303" scheme="http://www.huchan.xyz/tags/Jsr-303/"/>
+    
+  </entry>
   
   <entry>
     <title>uml类图</title>
@@ -42,7 +64,7 @@
     <link href="http://www.huchan.xyz/2017/03/11/SpringBoot%E9%9B%86%E6%88%90Solr/"/>
     <id>http://www.huchan.xyz/2017/03/11/SpringBoot集成Solr/</id>
     <published>2017-03-11T02:40:53.000Z</published>
-    <updated>2017-03-11T12:54:30.209Z</updated>
+    <updated>2017-03-12T12:51:53.426Z</updated>
     
     <summary type="html">
     

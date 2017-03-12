@@ -21,13 +21,6 @@
     </url>
 
     <url>
-        <loc>http://www.huchan.xyz/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/</loc>
-        <lastmod>2017-03-11T12:54:30.209Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.huchan.xyz/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
         <lastmod>2017-03-11T14:30:10.590Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,6 +30,20 @@
     <url>
         <loc>http://www.huchan.xyz/categories/uml/</loc>
         <lastmod>2017-03-12T05:26:34.866Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.huchan.xyz/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/</loc>
+        <lastmod>2017-03-12T12:51:53.426Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.huchan.xyz/categories/Hibernate-Validator/</loc>
+        <lastmod>2017-03-12T17:27:23.058Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
