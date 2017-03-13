@@ -4,9 +4,22 @@
   
     
     <entry>
-      <title><![CDATA[SpringBoot实现Validator国际化]]></title>
+      <title><![CDATA[SpringBoot实现Validator，thymeleaf国际化]]></title>
       <url>http://www.huchan.xyz/2017/03/13/SpringBoot%E5%AE%9E%E7%8E%B0Validator%E5%9B%BD%E9%99%85%E5%8C%96/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文是承接上一篇文章/2017/03/02/webservice/</p>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文教程是承接<a href="/2017/03/12/SpringBoot实现jsr-303验证规范/" title="SpringBoot实现jsr-303验证规范教程">SpringBoot实现jsr-303验证规范教程</a>书写，如果未看教程<a href="/2017/03/12/SpringBoot实现jsr-303验证规范/" title="请点击这里！">请点击这里！</a></p>
+<h2 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h2><h3 id="i18n资源文件"><a href="#i18n资源文件" class="headerlink" title="i18n资源文件"></a>i18n资源文件</h3><ul>
+<li>在resources目录下新建i18n文件夹，新建文件messages_en_US.properties，messages_zh_CN.properties。</li>
+<li>复制ValidationMessages_zh_CN.properties与ValidationMessages_en.properties到i18n目录下，位置在maven依赖库中到org.hibernate.hibernate-validator:5.3.4.Final，找到Resource Bundle ‘ValidatorMessages’。如图所示。<img src="/article_source/i18n/img/i18n_properties.png" class="i18n资源文件目录" title="i18n资源文件目录">
+<h3 id="i18n配置"><a href="#i18n配置" class="headerlink" title="i18n配置"></a>i18n配置</h3></li>
+<li>thymelaf国际化消息配置与国际化验证消息公用messages配置</li>
+<li>国际化验证消息自定义message配置<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.hibernate.validator.HibernateValidator;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</div><div class="line"><span class="keyword">import</span> org.springframework.context.support.ReloadableResourceBundleMessageSource;</div><div class="line"><span class="keyword">import</span> org.springframework.context.support.ResourceBundleMessageSource;</div><div class="line"><span class="keyword">import</span> org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;</div><div class="line"><span class="keyword">import</span> org.springframework.validation.beanvalidation.MethodValidationPostProcessor;</div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">I18nConfig</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * thymeleaf国际化消息配置</div><div class="line">     *</div><div class="line">     * <span class="doctag">@return</span> messageSource</div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ResourceBundleMessageSource <span class="title">messageSource</span><span class="params">()</span></span>&#123;</div><div class="line">        ResourceBundleMessageSource messageSource = <span class="keyword">new</span> ResourceBundleMessageSource();</div><div class="line">        messageSource.setUseCodeAsDefaultMessage(<span class="keyword">true</span>);</div><div class="line">        messageSource.setFallbackToSystemLocale(<span class="keyword">false</span>);</div><div class="line">        messageSource.setBasename(<span class="string">"i18n/messages"</span>); <span class="comment">//设置路径</span></div><div class="line">        messageSource.setDefaultEncoding(<span class="string">"UTF-8"</span>);</div><div class="line">        messageSource.setCacheSeconds(<span class="number">2</span>);</div><div class="line">        <span class="keyword">return</span> messageSource;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 自定义消息配置文件路径，指定路径必须加classpath</div><div class="line">     *</div><div class="line">     * <span class="doctag">@return</span> validatorMessageSource</div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ReloadableResourceBundleMessageSource <span class="title">validationMessageSource</span><span class="params">()</span></span>&#123;</div><div class="line">        ReloadableResourceBundleMessageSource validatorMessageSource = <span class="keyword">new</span> ReloadableResourceBundleMessageSource();</div><div class="line">        validatorMessageSource.setBasenames(<span class="string">"classpath:i18n/messages"</span>,<span class="string">"classpath:i18n/validation"</span>); <span class="comment">//设置路径</span></div><div class="line">        validatorMessageSource.setDefaultEncoding(<span class="string">"UTF-8"</span>);</div><div class="line">        validatorMessageSource.setUseCodeAsDefaultMessage(<span class="keyword">false</span>);</div><div class="line">        <span class="keyword">return</span> validatorMessageSource;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * hibernate校验国际化消息显示</div><div class="line">     *</div><div class="line">     * <span class="doctag">@return</span> validatorFactoryBean</div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> LocalValidatorFactoryBean <span class="title">validator</span><span class="params">()</span></span>&#123;</div><div class="line">        LocalValidatorFactoryBean validatorFactoryBean = <span class="keyword">new</span> LocalValidatorFactoryBean();</div><div class="line">        validatorFactoryBean.setProviderClass(HibernateValidator.class);</div><div class="line">        validatorFactoryBean.setValidationMessageSource(validationMessageSource());</div><div class="line">        <span class="keyword">return</span> validatorFactoryBean;</div><div class="line">    &#125;</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> MethodValidationPostProcessor <span class="title">methodValidationPostProcessor</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MethodValidationPostProcessor();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="国际化消息key"><a href="#国际化消息key" class="headerlink" title="国际化消息key"></a>国际化消息key</h3><ul>
+<li>在messages_zh_CN.properties文件中添加welcome = 你好，世界！，person.age.NotNull = 名字不能为空！</li>
+<li>在Person.java中字段age添加注解@NotNull(message = “{person.age.NotNull}”)<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3>访问路径: <a href="http://localhost:520/system/form" target="_blank" rel="external">http://localhost:520/system/form</a>, 输入name和age。<img src="/article_source/i18n/img/i18n_messages.png" class="国际化消息显示测试图" title="国际化消息显示测试图">
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
+</ul>
 <p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/">http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/</a> </p>
 ]]></content>
       
@@ -20,6 +33,8 @@
         <tags>
             
             <tag> SpringBoot </tag>
+            
+            <tag> thymeleaf </tag>
             
             <tag> 国际化 </tag>
             
@@ -151,9 +166,9 @@
         
         <tags>
             
-            <tag> uml类图 </tag>
-            
             <tag> 总结 </tag>
+            
+            <tag> uml类图 </tag>
             
         </tags>
         
@@ -314,12 +329,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[标签云]]></title>
-      <url>http://www.huchan.xyz/tags/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
       <content type="html"><![CDATA[<p>我是一名java程序猿，专注于Web开发，从事web开发工作至今已有接近2年，擅长的技能：</p>
@@ -340,6 +349,12 @@
 </ul>
 </blockquote>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[标签云]]></title>
+      <url>http://www.huchan.xyz/tags/index.html</url>
+      <content type="html"></content>
     </entry>
     
   

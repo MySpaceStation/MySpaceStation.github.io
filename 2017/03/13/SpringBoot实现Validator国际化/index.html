@@ -15,16 +15,19 @@
 
 
 
-<meta name="description" content="SpringBoot实现Validator国际化与添加自定义注解验证教程！">
+<meta name="description" content="SpringBoot实现Validator, thymeleaf国际化与添加自定义注解验证教程！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot实现Validator国际化">
+<meta property="og:title" content="SpringBoot实现Validator，thymeleaf国际化">
 <meta property="og:url" content="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/index.html">
 <meta property="og:site_name" content="小寒的博客">
-<meta property="og:description" content="SpringBoot实现Validator国际化与添加自定义注解验证教程！">
-<meta property="og:updated_time" content="2017-03-13T04:55:16.520Z">
+<meta property="og:description" content="SpringBoot实现Validator, thymeleaf国际化与添加自定义注解验证教程！">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/i18n/img/i18n_properties.png">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/i18n/img/i18n_messages.png">
+<meta property="og:updated_time" content="2017-03-13T06:34:34.074Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SpringBoot实现Validator国际化">
-<meta name="twitter:description" content="SpringBoot实现Validator国际化与添加自定义注解验证教程！">
+<meta name="twitter:title" content="SpringBoot实现Validator，thymeleaf国际化">
+<meta name="twitter:description" content="SpringBoot实现Validator, thymeleaf国际化与添加自定义注解验证教程！">
+<meta name="twitter:image" content="http://www.huchan.xyz/article_source/i18n/img/i18n_properties.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>SpringBoot实现Validator国际化 | 小寒的博客</title>
+<title>SpringBoot实现Validator，thymeleaf国际化 | 小寒的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -236,7 +239,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      SpringBoot实现Validator国际化
+      SpringBoot实现Validator，thymeleaf国际化
     </h1>
   
 
@@ -251,7 +254,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/国际化/">国际化</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thymeleaf/">thymeleaf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/国际化/">国际化</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -261,7 +264,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文是承接上一篇文章/2017/03/02/webservice/</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文教程是承接<a href="/2017/03/12/SpringBoot实现jsr-303验证规范/" title="SpringBoot实现jsr-303验证规范教程">SpringBoot实现jsr-303验证规范教程</a>书写，如果未看教程<a href="/2017/03/12/SpringBoot实现jsr-303验证规范/" title="请点击这里！">请点击这里！</a></p>
+<h2 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h2><h3 id="i18n资源文件"><a href="#i18n资源文件" class="headerlink" title="i18n资源文件"></a>i18n资源文件</h3><ul>
+<li>在resources目录下新建i18n文件夹，新建文件messages_en_US.properties，messages_zh_CN.properties。</li>
+<li>复制ValidationMessages_zh_CN.properties与ValidationMessages_en.properties到i18n目录下，位置在maven依赖库中到org.hibernate.hibernate-validator:5.3.4.Final，找到Resource Bundle ‘ValidatorMessages’。如图所示。<img src="/article_source/i18n/img/i18n_properties.png" class="i18n资源文件目录" title="i18n资源文件目录">
+<h3 id="i18n配置"><a href="#i18n配置" class="headerlink" title="i18n配置"></a>i18n配置</h3></li>
+<li>thymelaf国际化消息配置与国际化验证消息公用messages配置</li>
+<li>国际化验证消息自定义message配置<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.hibernate.validator.HibernateValidator;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</div><div class="line"><span class="keyword">import</span> org.springframework.context.support.ReloadableResourceBundleMessageSource;</div><div class="line"><span class="keyword">import</span> org.springframework.context.support.ResourceBundleMessageSource;</div><div class="line"><span class="keyword">import</span> org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;</div><div class="line"><span class="keyword">import</span> org.springframework.validation.beanvalidation.MethodValidationPostProcessor;</div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">I18nConfig</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * thymeleaf国际化消息配置</div><div class="line">     *</div><div class="line">     * <span class="doctag">@return</span> messageSource</div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ResourceBundleMessageSource <span class="title">messageSource</span><span class="params">()</span></span>&#123;</div><div class="line">        ResourceBundleMessageSource messageSource = <span class="keyword">new</span> ResourceBundleMessageSource();</div><div class="line">        messageSource.setUseCodeAsDefaultMessage(<span class="keyword">true</span>);</div><div class="line">        messageSource.setFallbackToSystemLocale(<span class="keyword">false</span>);</div><div class="line">        messageSource.setBasename(<span class="string">"i18n/messages"</span>); <span class="comment">//设置路径</span></div><div class="line">        messageSource.setDefaultEncoding(<span class="string">"UTF-8"</span>);</div><div class="line">        messageSource.setCacheSeconds(<span class="number">2</span>);</div><div class="line">        <span class="keyword">return</span> messageSource;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 自定义消息配置文件路径，指定路径必须加classpath</div><div class="line">     *</div><div class="line">     * <span class="doctag">@return</span> validatorMessageSource</div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ReloadableResourceBundleMessageSource <span class="title">validationMessageSource</span><span class="params">()</span></span>&#123;</div><div class="line">        ReloadableResourceBundleMessageSource validatorMessageSource = <span class="keyword">new</span> ReloadableResourceBundleMessageSource();</div><div class="line">        validatorMessageSource.setBasenames(<span class="string">"classpath:i18n/messages"</span>,<span class="string">"classpath:i18n/validation"</span>); <span class="comment">//设置路径</span></div><div class="line">        validatorMessageSource.setDefaultEncoding(<span class="string">"UTF-8"</span>);</div><div class="line">        validatorMessageSource.setUseCodeAsDefaultMessage(<span class="keyword">false</span>);</div><div class="line">        <span class="keyword">return</span> validatorMessageSource;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * hibernate校验国际化消息显示</div><div class="line">     *</div><div class="line">     * <span class="doctag">@return</span> validatorFactoryBean</div><div class="line">     */</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> LocalValidatorFactoryBean <span class="title">validator</span><span class="params">()</span></span>&#123;</div><div class="line">        LocalValidatorFactoryBean validatorFactoryBean = <span class="keyword">new</span> LocalValidatorFactoryBean();</div><div class="line">        validatorFactoryBean.setProviderClass(HibernateValidator.class);</div><div class="line">        validatorFactoryBean.setValidationMessageSource(validationMessageSource());</div><div class="line">        <span class="keyword">return</span> validatorFactoryBean;</div><div class="line">    &#125;</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> MethodValidationPostProcessor <span class="title">methodValidationPostProcessor</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MethodValidationPostProcessor();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="国际化消息key"><a href="#国际化消息key" class="headerlink" title="国际化消息key"></a>国际化消息key</h3><ul>
+<li>在messages_zh_CN.properties文件中添加welcome = 你好，世界！，person.age.NotNull = 名字不能为空！</li>
+<li>在Person.java中字段age添加注解@NotNull(message = “{person.age.NotNull}”)<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3>访问路径: <a href="http://localhost:520/system/form" target="_blank" rel="external">http://localhost:520/system/form</a>, 输入name和age。<img src="/article_source/i18n/img/i18n_messages.png" class="国际化消息显示测试图" title="国际化消息显示测试图">
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
+</ul>
 <p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/">http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/</a> </p>
 
       
@@ -289,7 +305,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#国际化"><span class="toc-number">2.</span> <span class="toc-text">国际化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#i18n资源文件"><span class="toc-number">2.1.</span> <span class="toc-text">i18n资源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i18n配置"><span class="toc-number">2.2.</span> <span class="toc-text">i18n配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#国际化消息key"><span class="toc-number">3.1.</span> <span class="toc-text">国际化消息key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-number">3.2.</span> <span class="toc-text">测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">4.</span> <span class="toc-text">结语</span></a></li></ol>
         
     </div>
     <style>
@@ -326,7 +342,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/13/SpringBoot实现Validator国际化/" data-title="SpringBoot实现Validator国际化" data-url="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/13/SpringBoot实现Validator国际化/" data-title="SpringBoot实现Validator，thymeleaf国际化" data-url="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/"></div>
     <script>
         var duoshuoQuery = {short_name:"myspacestation"};
         var loadComment = function(){
@@ -362,7 +378,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/SpringBoot实现Validator国际化/">SpringBoot实现Validator国际化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/SpringBoot实现jsr-303验证规范/">SpringBoot实现jsr-303验证规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/uml类图/">uml类图</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/webservice/">jersey+swagger的集成</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/SpringBoot实现Validator国际化/">SpringBoot实现Validator，thymeleaf国际化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/SpringBoot实现jsr-303验证规范/">SpringBoot实现jsr-303验证规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/uml类图/">uml类图</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/webservice/">jersey+swagger的集成</a></li></ul>
 
 
 
