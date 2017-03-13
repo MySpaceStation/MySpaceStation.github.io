@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huchan.xyz/"/>
-  <updated>2017-03-13T15:12:49.183Z</updated>
+  <updated>2017-03-13T16:14:19.965Z</updated>
   <id>http://www.huchan.xyz/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java多线程基础学习（一）</title>
+    <link href="http://www.huchan.xyz/2017/03/14/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/</id>
+    <published>2017-03-13T16:09:14.000Z</published>
+    <updated>2017-03-13T16:14:19.965Z</updated>
+    
+    <summary type="html">
+    
+      java多线程基础学习笔记！
+    
+    </summary>
+    
+      <category term="Java" scheme="http://www.huchan.xyz/categories/Java/"/>
+    
+    
+      <category term="学习笔记" scheme="http://www.huchan.xyz/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="多线程" scheme="http://www.huchan.xyz/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>java与web中常用名词解释</title>
@@ -64,7 +86,7 @@
     <link href="http://www.huchan.xyz/2017/03/12/SpringBoot%E5%AE%9E%E7%8E%B0jsr-303%E9%AA%8C%E8%AF%81%E8%A7%84%E8%8C%83/"/>
     <id>http://www.huchan.xyz/2017/03/12/SpringBoot实现jsr-303验证规范/</id>
     <published>2017-03-12T12:08:08.000Z</published>
-    <updated>2017-03-13T14:32:37.072Z</updated>
+    <updated>2017-03-13T16:09:47.249Z</updated>
     
     <summary type="html">
     

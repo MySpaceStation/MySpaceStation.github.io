@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[java多线程基础学习（一）]]></title>
+      <url>http://www.huchan.xyz/2017/03/14/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>待续。</p>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/">http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/</a> </p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> 多线程 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[java与web中常用名词解释]]></title>
       <url>http://www.huchan.xyz/2017/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文持续更新，用于收录一些计算机中遇到的常用名词。</p>
@@ -377,7 +401,7 @@
     <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
-      <content type="html"><![CDATA[<blockquote><p>我的名字叫胡禅，英文名叫milk，昵称小寒。从大学毕业陆陆续续实习到工作已经快2年了，感觉自己成长了很多。作为一名计算机专业(不是修电脑的)毕业的学生感觉自己的路还有很长，越是接触的越深，越感觉自己渺小(感觉自己好菜)。知识永远学不完，技术永远在更新，学习的心却从未改变，坚信自己的道路，走向更开阔的人生。渴望接触更加广阔的平台，接触更多的大牛(抱抱大腿)。处理好生活中的每一个细节，让自己的人生变得更加的精致。</p>
+      <content type="html"><![CDATA[<blockquote><p>我叫胡禅，程序猿一枚。从大学毕业陆陆续续实习到工作已经快2年了，感觉自己成长了很多。作为一名计算机专业(哦，非修电脑的)毕业学生，感觉学习的路很长，技术这东西，接触的越深，越感觉自己渺小(菜鸟一个)。永远学不完的知识，技术永远在更新，好学的心却从未改变。始终坚信自己所选择的道路，能带我看到更广阔的世界，站上世界的舞台。我渴望接触更加广阔的平台，接触更多的从事计算机事业大牛(抱抱大腿)。认真对待生活中的细节，让自己的人生更加精致。</p>
 <footer><strong>胡禅</strong><cite><a href="http://www.huchan.xyz">www.huchan.xyz</a></cite></footer></blockquote>
 ]]></content>
     </entry>
