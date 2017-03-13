@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[SpringBoot实现Validator国际化]]></title>
+      <url>http://www.huchan.xyz/2017/03/13/SpringBoot%E5%AE%9E%E7%8E%B0Validator%E5%9B%BD%E9%99%85%E5%8C%96/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文是承接上一篇文章/2017/03/02/webservice/</p>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/">http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/</a> </p>
+]]></content>
+      
+        <categories>
+            
+            <category> Hibernate Validator </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> SpringBoot </tag>
+            
+            <tag> 国际化 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[SpringBoot实现jsr-303验证规范]]></title>
       <url>http://www.huchan.xyz/2017/03/12/SpringBoot%E5%AE%9E%E7%8E%B0jsr-303%E9%AA%8C%E8%AF%81%E8%A7%84%E8%8C%83/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="校验常用注解索引"><a href="#校验常用注解索引" class="headerlink" title="校验常用注解索引"></a>校验常用注解索引</h3><ul>
@@ -127,9 +151,9 @@
         
         <tags>
             
-            <tag> 总结 </tag>
-            
             <tag> uml类图 </tag>
+            
+            <tag> 总结 </tag>
             
         </tags>
         
@@ -290,6 +314,12 @@
     </entry>
     
     <entry>
+      <title><![CDATA[标签云]]></title>
+      <url>http://www.huchan.xyz/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
       <content type="html"><![CDATA[<p>我是一名java程序猿，专注于Web开发，从事web开发工作至今已有接近2年，擅长的技能：</p>
@@ -310,12 +340,6 @@
 </ul>
 </blockquote>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[标签云]]></title>
-      <url>http://www.huchan.xyz/tags/index.html</url>
-      <content type="html"></content>
     </entry>
     
   

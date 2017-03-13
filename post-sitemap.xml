@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://www.huchan.xyz/2017/03/13/SpringBoot%E5%AE%9E%E7%8E%B0Validator%E5%9B%BD%E9%99%85%E5%8C%96/</loc>
+        <lastmod>2017-03-13T04:55:16.520Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.huchan.xyz/2017/03/12/SpringBoot%E5%AE%9E%E7%8E%B0jsr-303%E9%AA%8C%E8%AF%81%E8%A7%84%E8%8C%83/</loc>
         <lastmod>2017-03-12T17:27:23.058Z</lastmod>
         <changefreq>weekly</changefreq>

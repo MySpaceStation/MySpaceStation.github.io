@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="java设计模式六大原则总结！">
+<meta name="description" content="SpringBoot实现Validator国际化与添加自定义注解验证教程！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式六大原则">
-<meta property="og:url" content="http://www.huchan.xyz/2017/03/10/设计模式六大原则/index.html">
+<meta property="og:title" content="SpringBoot实现Validator国际化">
+<meta property="og:url" content="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/index.html">
 <meta property="og:site_name" content="小寒的博客">
-<meta property="og:description" content="java设计模式六大原则总结！">
-<meta property="og:updated_time" content="2017-03-11T14:30:10.590Z">
+<meta property="og:description" content="SpringBoot实现Validator国际化与添加自定义注解验证教程！">
+<meta property="og:updated_time" content="2017-03-13T04:55:16.520Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式六大原则">
-<meta name="twitter:description" content="java设计模式六大原则总结！">
+<meta name="twitter:title" content="SpringBoot实现Validator国际化">
+<meta name="twitter:description" content="SpringBoot实现Validator国际化与添加自定义注解验证教程！">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>设计模式六大原则 | 小寒的博客</title>
+<title>SpringBoot实现Validator国际化 | 小寒的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -217,11 +217,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-设计模式六大原则" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-SpringBoot实现Validator国际化" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/10/设计模式六大原则/" class="article-date">
-      <time datetime="2017-03-10T15:10:44.000Z" itemprop="datePublished">2017-03-10</time>
+      <a href="/2017/03/13/SpringBoot实现Validator国际化/" class="article-date">
+      <time datetime="2017-03-12T18:52:06.000Z" itemprop="datePublished">2017-03-13</time>
 </a>
 
 
@@ -236,7 +236,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      设计模式六大原则
+      SpringBoot实现Validator国际化
     </h1>
   
 
@@ -245,13 +245,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
+    <a class="article-category-link" href="/categories/Hibernate-Validator/">Hibernate Validator</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/国际化/">国际化</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -261,38 +261,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
-<li>客户端不应该强行依赖它不需要的接口</li>
-<li>类间的依赖关系应建立在最小的接口上</li>
-<li>接口尽量小（一个接口保证服务一个子模块或者业务逻辑）</li>
-<li>接口高内聚（对内高度依赖，对外尽可能隔离）</li>
-<li>接口设计是有限度的<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3></li>
-<li>对象接口：JAVA中声明的一个类，通过new关键字产生的一个实例，它是对一个类型的事物的描述，这也是一种接口。</li>
-<li>类接口：关键字interface定义。<h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3>一个类只有一个引起这一个类的变化原因。<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3></li>
-<li>降低类的复杂性，实现什么样的职责都有清晰的定义</li>
-<li>提高可读性</li>
-<li>提高可维护性</li>
-<li>降低变更引起的风险，对系统扩展性和维护性很有帮助<h2 id="迪米特原则"><a href="#迪米特原则" class="headerlink" title="迪米特原则"></a>迪米特原则</h2><h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3>一个对象应该对其他对象了解最少。 一个类要尽量的封装自己，一个类只与自己的朋友类打交道一般朋友类是成员变量或者参数，非朋友类一般都是局部变量。<h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3></li>
-<li>在类的划分上，应该创建有弱耦合的类。</li>
-<li>在类的结构上，每一个类都应当尽量降低成员的访问权限。</li>
-<li>在类的设计上，只要有可能，一个类应当设计成不变类。</li>
-<li>在对其他类的引用上，一个对象对其他对象的引用应当降到最低。</li>
-<li>尽量降低类的访问权限。</li>
-<li>谨慎使用序列化功能。</li>
-<li>不要暴漏类成员，而应该提供相应的访问器（属性）。<h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3>定义对扩展开放，对修改关闭。<h2 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h2>通过抽象（抽象类或接口）使各个类或模块的实现彼此独立，不相互影响，实现模块间的松耦合。</li>
-<li>高层模块不应该依赖于底层模块，两者都应该依赖于抽象抽象的类或接口。</li>
-<li>抽象不应该依赖于细节具体实现的类，细节应该依赖抽象。<h3 id="实现-3"><a href="#实现-3" class="headerlink" title="实现"></a>实现</h3></li>
-<li>通过构造函数传递依赖对象传递的参数为抽象类或接口</li>
-<li>通过setter方法传递依赖对象设置setxxx方法中参数为抽象类或接口</li>
-<li>接口声明实现依赖对象<h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><h3 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a>定义</h3></li>
-<li>所有引用基类的地方必须能够透明的使用其子类</li>
-<li>父类引用的地方子类就能够引用，替换为子类不会产生任何错位或异常，子类替换其父类可能会出现问题。<h3 id="实现-4"><a href="#实现-4" class="headerlink" title="实现"></a>实现</h3>为良好的继承定义一个规范：</li>
-<li>子类必须完全实现父类的方法</li>
-<li>子类可以有自己的特性，可以定义其他的方法或属性。</li>
-<li>重载（覆盖）或者实现父类的方法输入参数可以被放大。</li>
-<li>重写（覆写）或者实现父类的方法时输出结果可以被缩小。<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
-</ul>
-<p>文章链接 <a href="http://www.huchan.xyz/2017/03/10/设计模式六大原则/">http://www.huchan.xyz/2017/03/10/设计模式六大原则/</a> </p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文是承接上一篇文章/2017/03/02/webservice/</p>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/">http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/</a> </p>
 
       
     </div>
@@ -304,16 +274,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/03/11/SpringBoot集成Solr/">
-                    SpringBoot集成Solr
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/03/02/webservice/">
-                    jersey+swagger的集成
+                <a href="/2017/03/12/SpringBoot实现jsr-303验证规范/">
+                    SpringBoot实现jsr-303验证规范
                 </a>
             </div>
         
@@ -325,7 +289,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#接口隔离原则"><span class="toc-number">1.</span> <span class="toc-text">接口隔离原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义"><span class="toc-number">1.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">1.2.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单一职责原则"><span class="toc-number">2.</span> <span class="toc-text">单一职责原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-1"><span class="toc-number">2.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现-1"><span class="toc-number">2.2.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#迪米特原则"><span class="toc-number">3.</span> <span class="toc-text">迪米特原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-2"><span class="toc-number">3.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现-2"><span class="toc-number">3.2.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开闭原则"><span class="toc-number">4.</span> <span class="toc-text">开闭原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-3"><span class="toc-number">4.1.</span> <span class="toc-text">定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖倒置原则"><span class="toc-number">5.</span> <span class="toc-text">依赖倒置原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实现-3"><span class="toc-number">5.1.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#里氏替换原则"><span class="toc-number">6.</span> <span class="toc-text">里氏替换原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义-4"><span class="toc-number">6.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现-4"><span class="toc-number">6.2.</span> <span class="toc-text">实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">7.</span> <span class="toc-text">结语</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol>
         
     </div>
     <style>
@@ -362,7 +326,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/10/设计模式六大原则/" data-title="设计模式六大原则" data-url="http://www.huchan.xyz/2017/03/10/设计模式六大原则/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/13/SpringBoot实现Validator国际化/" data-title="SpringBoot实现Validator国际化" data-url="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/"></div>
     <script>
         var duoshuoQuery = {short_name:"myspacestation"};
         var loadComment = function(){
@@ -386,15 +350,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/03/11/SpringBoot集成Solr/" title="上一篇: SpringBoot集成Solr">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/03/02/webservice/" title="下一篇: jersey+swagger的集成">
+            <a href="/2017/03/12/SpringBoot实现jsr-303验证规范/" title="下一篇: SpringBoot实现jsr-303验证规范">
                 <i class="fa fa-angle-right"></i>
             </a>
         
