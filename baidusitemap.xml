@@ -4,7 +4,7 @@
     
   <url>
     <loc>http://www.huchan.xyz/2017/03/13/SpringBoot%E5%AE%9E%E7%8E%B0Validator%E5%9B%BD%E9%99%85%E5%8C%96/</loc>
-    <lastmod>2017-03-13T09:42:20.263Z</lastmod>
+    <lastmod>2017-03-13T11:18:47.476Z</lastmod>
     <data>
         <display>
         <title>SpringBoot实现Validator，thymeleaf国际化</title>
@@ -78,9 +78,9 @@
         <title>uml类图</title>
         <pubTime>2017-03-12T03:44:26.000Z</pubTime>
         
-        <tag>uml类图 </tag>
-         
         <tag>总结 </tag>
+         
+        <tag>uml类图 </tag>
          
          
            
