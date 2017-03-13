@@ -8,24 +8,24 @@
       <url>http://www.huchan.xyz/2017/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文持续更新，用于收录一些计算机中遇到的常用名词。</p>
 <h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><ul>
-<li>VO(<em>Value Object</em>)： 值对象，用<em>new</em>关键字创建，由<em>GC</em>回收的，存活在业务层的，是业务逻辑使用的，它存活的目的就是为数据提供一个生存的地方。</li>
-<li>PO(<em>Persisent Object</em>)：持久对象，向数据库中添加新数据时创建，删除数据库中数据时消除。并且它只能存活在一个数据库连接中，断开连接即被销毁。</li>
+<li>VO(Value Object)： 值对象，用new关键字创建，由GC回收的，存活在业务层的，是业务逻辑使用的，它存活的目的就是为数据提供一个生存的地方。</li>
+<li>PO(Persisent Object)：持久对象，向数据库中添加新数据时创建，删除数据库中数据时消除。并且它只能存活在一个数据库连接中，断开连接即被销毁。</li>
 <li>DO(Domain Object)：领域对象，就是从现实世界中抽象出来的有形或无形的业务实体。</li>
 <li>DTO(Data Transfer Object)：数据传输对象，主要用于远程调用等需要大量传输对象的地方，客户端用webservice获取数据，此时传输的数据对象为DTO。</li>
-<li>BO(<em>Business Object</em>)：业务对象，主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象。</li>
-<li>TO(<em>Transfer Object</em>)：数据传输对象，在应用程序不同<em>tie</em>(关系)之间传输的对象。</li>
-<li>QO(<em>Query Object</em>)：查询对象。</li>
-<li>POJO(<em>Plain Ordinary Java Object</em>)：简单无规则<em>java</em>对象，在一些ORM中能够做到维护数据库表记录的PO完全是一个符合<em>java Bean</em>规范的纯<em>java</em>对象，只有属性字段及<em>setter</em>和<em>getter</em>方法,用于输出自身数据的<em>toString</em>方法，没有增加别的属性和方法。</li>
-<li>DAO(<em>Data Access Object</em>)：数据访问对象，是一个<em>sun</em>的一个标准<em>j2ee</em>设计模式，这个模式中有个接口就是<em>DAO</em>，它负持久层的操作。为业务层提供接口。此对象用于访问数据库。通常和<em>PO</em>结合使用，<em>DAO</em>中包含了各种数据库的操作方法。通过它的方法，结合<em>PO</em>对数据库进行相关的操作。夹在业务逻辑与数据库资源中间。配合<em>VO</em>, 提供数据库的<em>CRUD</em>操作。</li>
-<li>ORM(Object Relational Mapping)：对象关系映射，可以生成所有的关于对象保存，删除，读取的<em>SQL</em>语句。</li>
+<li>BO(Business Object)：业务对象，主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象。</li>
+<li>TO(Transfer Object)：数据传输对象，在应用程序不同tie(关系)之间传输的对象。</li>
+<li>QO(Query Object)：查询对象。</li>
+<li>POJO(Plain Ordinary Java Object)：简单无规则java对象，在一些ORM中能够做到维护数据库表记录的PO完全是一个符合java Bean规范的纯java对象，只有属性字段及setter和getter方法,用于输出自身数据的toString方法，没有增加别的属性和方法。</li>
+<li>DAO(Data Access Object)：数据访问对象，是一个sun的一个标准j2ee设计模式，这个模式中有个接口就是DAO，它负持久层的操作。为业务层提供接口。此对象用于访问数据库。通常和PO结合使用，DAO中包含了各种数据库的操作方法。通过它的方法，结合PO对数据库进行相关的操作。夹在业务逻辑与数据库资源中间。配合VO, 提供数据库的CRUD操作。</li>
+<li>ORM(Object Relational Mapping)：对象关系映射，可以生成所有的关于对象保存，删除，读取的SQL语句。</li>
 <li>心跳机制：定时发送一个自定义的结构体(心跳包)，让对方知道自己还活着，以确保连接的有效性的机制。</li>
 <li>悲观锁：顾名思义，就是很悲观，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会block直到它拿到传统的关系型数据库里边就用到了很多这种锁机制，比如行锁，表锁等，读锁，写锁等，都是在做操作之前先上锁。</li>
 <li>乐观锁：顾名思义，就是很乐观，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号等机制。乐观锁适用于多读的应用类型，这样可以提高吞吐量，像数据库如果提供类似于write_condition机制的其实都是提供的乐观锁。</li>
 <li>死锁：多个线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。由于线程被无限期地阻塞，因此程序不能正常运行。<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2></li>
-<li>领域模型<img src="/article_source/note/img/domain.png" class="验证测试图" title="验证测试图"></li>
 <li>分布式：一个业务分拆多个子业务，部署在不同的服务器上。</li>
 <li>集群：同一个业务，部署在多个服务器上。</li>
-<li>负载均衡：是分布式系统架构设计中必须考虑的因素之一，它通常是指，将请求/数据【均匀】分摊到多个操作单元上执行，负载均衡的关键在于【均匀】。常见互联网分布式架构如上，分为客户端层、反向代理nginx层、站点层、服务层、数据层。</li>
+<li>负载均衡：是分布式系统架构设计中必须考虑的因素之一，它通常是指，将请求/数据【均匀】分摊到多个操作单元上执行，负载均衡的关键在于【均匀】。常见互联网分布式架构如上，分为客户端层、反向代理nginx层、站点层、服务层、数据层。<h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><img src="/article_source/note/img/domain.png" class="验证测试图" title="验证测试图">
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
 </ul>
 <p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/">http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/</a> </p>
 ]]></content>
@@ -268,9 +268,9 @@
         
         <tags>
             
-            <tag> SpringBoot </tag>
-            
             <tag> Apahce Solr </tag>
+            
+            <tag> SpringBoot </tag>
             
         </tags>
         
@@ -375,12 +375,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[标签云]]></title>
-      <url>http://www.huchan.xyz/tags/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
       <content type="html"><![CDATA[<p>我是一名java程序猿，专注于Web开发，从事web开发工作至今已有接近2年，擅长的技能：</p>
@@ -401,6 +395,12 @@
 </ul>
 </blockquote>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[标签云]]></title>
+      <url>http://www.huchan.xyz/tags/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
