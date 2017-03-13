@@ -3,112 +3,19 @@
 
     
   <url>
-    <loc>http://www.huchan.xyz/2017/03/13/SpringBoot%E5%AE%9E%E7%8E%B0Validator%E5%9B%BD%E9%99%85%E5%8C%96/</loc>
-    <lastmod>2017-03-13T11:18:47.476Z</lastmod>
+    <loc>http://www.huchan.xyz/2017/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</loc>
+    <lastmod>2017-03-13T15:03:29.296Z</lastmod>
     <data>
         <display>
-        <title>SpringBoot实现Validator，thymeleaf国际化</title>
-        <pubTime>2017-03-12T18:52:06.000Z</pubTime>
+        <title>java与web中常用名词解释</title>
+        <pubTime>2017-03-13T13:06:19.000Z</pubTime>
         
-        <tag>SpringBoot </tag>
-         
-        <tag>thymeleaf </tag>
-         
-        <tag>国际化 </tag>
+        <tag>学习笔记 </tag>
          
          
            
              
-              <breadCrumb title="Hibernate Validator" url="http://www.huchan.xyz/categories/Hibernate-Validator/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.huchan.xyz/2017/03/12/SpringBoot%E5%AE%9E%E7%8E%B0jsr-303%E9%AA%8C%E8%AF%81%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2017-03-12T17:27:23.058Z</lastmod>
-    <data>
-        <display>
-        <title>SpringBoot实现jsr-303验证规范</title>
-        <pubTime>2017-03-12T12:08:08.000Z</pubTime>
-        
-        <tag>SpringBoot </tag>
-         
-        <tag>Jsr-303 </tag>
-         
-         
-           
-             
-              <breadCrumb title="Hibernate Validator" url="http://www.huchan.xyz/categories/Hibernate-Validator/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.huchan.xyz/2017/03/11/SpringBoot%E9%9B%86%E6%88%90Solr/</loc>
-    <lastmod>2017-03-12T12:51:53.426Z</lastmod>
-    <data>
-        <display>
-        <title>SpringBoot集成Solr</title>
-        <pubTime>2017-03-11T02:40:53.000Z</pubTime>
-        
-        <tag>Apahce Solr </tag>
-         
-        <tag>SpringBoot </tag>
-         
-         
-           
-             
-              <breadCrumb title="全文检索" url="http://www.huchan.xyz/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.huchan.xyz/2017/03/12/uml%E7%B1%BB%E5%9B%BE/</loc>
-    <lastmod>2017-03-12T05:26:34.866Z</lastmod>
-    <data>
-        <display>
-        <title>uml类图</title>
-        <pubTime>2017-03-12T03:44:26.000Z</pubTime>
-        
-        <tag>总结 </tag>
-         
-        <tag>uml类图 </tag>
-         
-         
-           
-             
-              <breadCrumb title="uml" url="http://www.huchan.xyz/categories/uml/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-  <url>
-    <loc>http://www.huchan.xyz/2017/03/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/</loc>
-    <lastmod>2017-03-11T14:30:10.590Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式六大原则</title>
-        <pubTime>2017-03-10T15:10:44.000Z</pubTime>
-        
-        <tag>总结 </tag>
-         
-         
-           
-             
-              <breadCrumb title="设计模式" url="http://www.huchan.xyz/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+              <breadCrumb title="名词解释" url="http://www.huchan.xyz/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
           
         </display>
     </data>
@@ -117,7 +24,7 @@
     
   <url>
     <loc>http://www.huchan.xyz/2017/03/02/webservice/</loc>
-    <lastmod>2017-03-11T11:19:36.092Z</lastmod>
+    <lastmod>2017-03-13T14:33:46.104Z</lastmod>
     <data>
         <display>
         <title>jersey+swagger的集成</title>
@@ -141,4 +48,117 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://www.huchan.xyz/2017/03/12/SpringBoot%E5%AE%9E%E7%8E%B0jsr-303%E9%AA%8C%E8%AF%81%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2017-03-13T14:32:37.072Z</lastmod>
+    <data>
+        <display>
+        <title>SpringBoot实现jsr-303验证规范</title>
+        <pubTime>2017-03-12T12:08:08.000Z</pubTime>
+        
+        <tag>SpringBoot </tag>
+         
+        <tag>Jsr-303 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Hibernate Validator" url="http://www.huchan.xyz/categories/Hibernate-Validator/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.huchan.xyz/2017/03/13/SpringBoot%E5%AE%9E%E7%8E%B0Validator%E5%9B%BD%E9%99%85%E5%8C%96/</loc>
+    <lastmod>2017-03-13T14:32:06.864Z</lastmod>
+    <data>
+        <display>
+        <title>SpringBoot实现Validator，thymeleaf国际化</title>
+        <pubTime>2017-03-12T18:52:06.000Z</pubTime>
+        
+        <tag>SpringBoot </tag>
+         
+        <tag>Thymeleaf </tag>
+         
+        <tag>国际化 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Hibernate Validator" url="http://www.huchan.xyz/categories/Hibernate-Validator/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.huchan.xyz/2017/03/12/uml%E7%B1%BB%E5%9B%BE/</loc>
+    <lastmod>2017-03-13T14:31:23.088Z</lastmod>
+    <data>
+        <display>
+        <title>UML类图</title>
+        <pubTime>2017-03-12T03:44:26.000Z</pubTime>
+        
+        <tag>总结 </tag>
+         
+        <tag>UML类图 </tag>
+         
+         
+           
+             
+              <breadCrumb title="UML" url="http://www.huchan.xyz/categories/UML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.huchan.xyz/2017/03/11/SpringBoot%E9%9B%86%E6%88%90Solr/</loc>
+    <lastmod>2017-03-13T14:30:34.336Z</lastmod>
+    <data>
+        <display>
+        <title>SpringBoot集成Solr</title>
+        <pubTime>2017-03-11T02:40:53.000Z</pubTime>
+        
+        <tag>SpringBoot </tag>
+         
+        <tag>Apahce Solr </tag>
+         
+         
+           
+             
+              <breadCrumb title="全文检索" url="http://www.huchan.xyz/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.huchan.xyz/2017/03/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/</loc>
+    <lastmod>2017-03-13T14:29:45.824Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式六大原则</title>
+        <pubTime>2017-03-10T15:10:44.000Z</pubTime>
+        
+        <tag>总结 </tag>
+         
+         
+           
+             
+              <breadCrumb title="设计模式" url="http://www.huchan.xyz/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
 </urlset>

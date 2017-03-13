@@ -15,15 +15,18 @@
 
 
 
-<meta name="description" content="细节是生活的意境，精致是生活的姿态！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡禅的博客">
-<meta property="og:url" content="http://www.huchan.xyz/archives/2017/index.html">
+<meta name="description" content="收录java与web中常用名词！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java与web中常用名词解释">
+<meta property="og:url" content="http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/index.html">
 <meta property="og:site_name" content="胡禅的博客">
-<meta property="og:description" content="细节是生活的意境，精致是生活的姿态！">
+<meta property="og:description" content="收录java与web中常用名词！">
+<meta property="og:image" content="http://www.huchan.xyz/article_source/note/img/domain.png">
+<meta property="og:updated_time" content="2017-03-13T15:03:29.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡禅的博客">
-<meta name="twitter:description" content="细节是生活的意境，精致是生活的姿态！">
+<meta name="twitter:title" content="java与web中常用名词解释">
+<meta name="twitter:description" content="收录java与web中常用名词！">
+<meta name="twitter:image" content="http://www.huchan.xyz/article_source/note/img/domain.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -55,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2017 | 胡禅的博客</title>
+<title>java与web中常用名词解释 | 胡禅的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -65,8 +68,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -226,282 +229,179 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-计算机中常用名词解释" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/13/计算机中常用名词解释/" class="archive-article-date">
-      <time datetime="2017-03-13T13:06:19.000Z" itemprop="datePublished">03-13</time>
+    <div class="article-meta">
+      <a href="/2017/03/13/计算机中常用名词解释/" class="article-date">
+      <time datetime="2017-03-13T13:06:19.000Z" itemprop="datePublished">2017-03-13</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/计算机中常用名词解释/">java与web中常用名词解释</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java与web中常用名词解释
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/名词解释/">名词解释</a>
     </div>
 
 
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文持续更新，用于收录一些计算机中遇到的常用名词。</p>
+<h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><ul>
+<li>VO(<em>Value Object</em>)： 值对象，用<em>new</em>关键字创建，由<em>GC</em>回收的，存活在业务层的，是业务逻辑使用的，它存活的目的就是为数据提供一个生存的地方。</li>
+<li>PO(<em>Persisent Object</em>)：持久对象，向数据库中添加新数据时创建，删除数据库中数据时消除。并且它只能存活在一个数据库连接中，断开连接即被销毁。</li>
+<li>DO(Domain Object)：领域对象，就是从现实世界中抽象出来的有形或无形的业务实体。</li>
+<li>DTO(Data Transfer Object)：数据传输对象，主要用于远程调用等需要大量传输对象的地方，客户端用webservice获取数据，此时传输的数据对象为DTO。</li>
+<li>BO(<em>Business Object</em>)：业务对象，主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象。</li>
+<li>TO(<em>Transfer Object</em>)：数据传输对象，在应用程序不同<em>tie</em>(关系)之间传输的对象。</li>
+<li>QO(<em>Query Object</em>)：查询对象。</li>
+<li>POJO(<em>Plain Ordinary Java Object</em>)：简单无规则<em>java</em>对象，在一些ORM中能够做到维护数据库表记录的PO完全是一个符合<em>java Bean</em>规范的纯<em>java</em>对象，只有属性字段及<em>setter</em>和<em>getter</em>方法,用于输出自身数据的<em>toString</em>方法，没有增加别的属性和方法。</li>
+<li>DAO(<em>Data Access Object</em>)：数据访问对象，是一个<em>sun</em>的一个标准<em>j2ee</em>设计模式，这个模式中有个接口就是<em>DAO</em>，它负持久层的操作。为业务层提供接口。此对象用于访问数据库。通常和<em>PO</em>结合使用，<em>DAO</em>中包含了各种数据库的操作方法。通过它的方法，结合<em>PO</em>对数据库进行相关的操作。夹在业务逻辑与数据库资源中间。配合<em>VO</em>, 提供数据库的<em>CRUD</em>操作。</li>
+<li>ORM(Object Relational Mapping)：对象关系映射，可以生成所有的关于对象保存，删除，读取的<em>SQL</em>语句。</li>
+<li>心跳机制：定时发送一个自定义的结构体(心跳包)，让对方知道自己还活着，以确保连接的有效性的机制。</li>
+<li>悲观锁：顾名思义，就是很悲观，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会block直到它拿到传统的关系型数据库里边就用到了很多这种锁机制，比如行锁，表锁等，读锁，写锁等，都是在做操作之前先上锁。</li>
+<li>乐观锁：顾名思义，就是很乐观，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号等机制。乐观锁适用于多读的应用类型，这样可以提高吞吐量，像数据库如果提供类似于write_condition机制的其实都是提供的乐观锁。</li>
+<li>死锁：多个线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。由于线程被无限期地阻塞，因此程序不能正常运行。<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2></li>
+<li>领域模型<img src="/article_source/note/img/domain.png" class="验证测试图" title="验证测试图"></li>
+<li>分布式：一个业务分拆多个子业务，部署在不同的服务器上。</li>
+<li>集群：同一个业务，部署在多个服务器上。</li>
+<li>负载均衡：是分布式系统架构设计中必须考虑的因素之一，它通常是指，将请求/数据【均匀】分摊到多个操作单元上执行，负载均衡的关键在于【均匀】。常见互联网分布式架构如上，分为客户端层、反向代理nginx层、站点层、服务层、数据层。</li>
+</ul>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/">http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/</a> </p>
+
+      
+    </div>
+    
   </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/03/13/SpringBoot实现Validator国际化/">
+                    SpringBoot实现Validator，thymeleaf国际化
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">2.</span> <span class="toc-text">java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web"><span class="toc-number">3.</span> <span class="toc-text">web</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
     
+<div class="share">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/13/SpringBoot实现Validator国际化/" class="archive-article-date">
-      <time datetime="2017-03-12T18:52:06.000Z" itemprop="datePublished">03-13</time>
-</a>
+
+    
+        <div class="addthis_sharing_toolbox"></div>
+    
+</div>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/SpringBoot实现Validator国际化/">SpringBoot实现Validator，thymeleaf国际化</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Hibernate-Validator/">Hibernate Validator</a>
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/13/计算机中常用名词解释/" data-title="java与web中常用名词解释" data-url="http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"myspacestation"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/03/13/SpringBoot实现Validator国际化/" title="下一篇: SpringBoot实现Validator，thymeleaf国际化">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Thymeleaf/">Thymeleaf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/国际化/">国际化</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/12/SpringBoot实现jsr-303验证规范/" class="archive-article-date">
-      <time datetime="2017-03-12T12:08:08.000Z" itemprop="datePublished">03-12</time>
-</a>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/计算机中常用名词解释/">java与web中常用名词解释</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/SpringBoot实现Validator国际化/">SpringBoot实现Validator，thymeleaf国际化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/SpringBoot实现jsr-303验证规范/">SpringBoot实现jsr-303验证规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/uml类图/">UML类图</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/webservice/">jersey+swagger的集成</a></li></ul>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/12/SpringBoot实现jsr-303验证规范/">SpringBoot实现jsr-303验证规范</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Hibernate-Validator/">Hibernate Validator</a>
-    </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jsr-303/">Jsr-303</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/12/uml类图/" class="archive-article-date">
-      <time datetime="2017-03-12T03:44:26.000Z" itemprop="datePublished">03-12</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/12/uml类图/">UML类图</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/UML/">UML</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UML类图/">UML类图</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/11/SpringBoot集成Solr/" class="archive-article-date">
-      <time datetime="2017-03-11T02:40:53.000Z" itemprop="datePublished">03-11</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/全文检索/">全文检索</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apahce-Solr/">Apahce Solr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/10/设计模式六大原则/" class="archive-article-date">
-      <time datetime="2017-03-10T15:10:44.000Z" itemprop="datePublished">03-10</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/02/webservice/" class="archive-article-date">
-      <time datetime="2017-03-01T16:52:05.000Z" itemprop="datePublished">03-02</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/02/webservice/">jersey+swagger的集成</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Webservice/">Webservice</a><a class="article-category-link" href="/categories/Webservice/Restful/">Restful</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jersey/">Jersey</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swagger/">Swagger</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

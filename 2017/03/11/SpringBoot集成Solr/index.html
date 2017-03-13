@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://www.huchan.xyz/article_source/solr/img/name_xml.png">
 <meta property="og:image" content="http://www.huchan.xyz/article_source/solr/img/SolrQuery.png">
 <meta property="og:image" content="http://www.huchan.xyz/article_source/solr/img/SolrRepositories.png">
-<meta property="og:updated_time" content="2017-03-12T12:51:53.426Z">
+<meta property="og:updated_time" content="2017-03-13T14:30:34.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot集成Solr">
 <meta name="twitter:description" content="Solr6.4版本配置以及Spring Data for Apache Solr教程！">
@@ -279,27 +279,27 @@
       
           
         <h2 id="Apache-Solr"><a href="#Apache-Solr" class="headerlink" title="Apache Solr"></a>Apache Solr</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><ul>
-<li>Apache Solr链接地址：<a href="http://www-eu.apache.org/dist/lucene/solr/6.4.2/" target="_blank" rel="external">http://www-eu.apache.org/dist/lucene/solr/6.4.2/</a></li>
-<li>选择solr-6.4.2.zip<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3></li>
-<li>解压solr-6.4.2.zip</li>
-<li>找到安装的位置，在bin目录下, shift + 鼠标右键选择在此处打开命令窗口</li>
+<li>Apache Solr链接地址：<a href="http://www-eu.apache.org/dist/lucene/solr/6.4.2/。" target="_blank" rel="external">http://www-eu.apache.org/dist/lucene/solr/6.4.2/。</a></li>
+<li>选择solr-6.4.2.zip。<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3></li>
+<li>解压solr-6.4.2.zip。</li>
+<li>找到安装的位置，在bin目录下, shift + 鼠标右键选择在此处打开命令窗口。</li>
 <li>输入solr start，控制台显示如下语句表明开启成功，默认端口8983。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Archiving 1 old GC log files to G:\Plugins\solr-6.4.2\server\logs\archived</div><div class="line">Archiving 1 console log files to G:\Plugins\solr-6.4.2\server\logs\archived</div><div class="line">Rotating solr logs, keeping a max of 9 generations</div><div class="line">Waiting up to 30 to see Solr running on port 8983</div><div class="line">Started Solr server on port 8983. Happy searching!</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Solr视图"><a href="#Solr视图" class="headerlink" title="Solr视图"></a>Solr视图</h3><p>访问路径：<a href="http://localhost:8983/solr" target="_blank" rel="external">http://localhost:8983/solr</a><br><img src="/article_source/solr/img/solr.png" class="Solr视图" title="Solr视图"></p>
+<h3 id="Solr视图"><a href="#Solr视图" class="headerlink" title="Solr视图"></a>Solr视图</h3><p>访问路径：<a href="http://localhost:8983/solr。" target="_blank" rel="external">http://localhost:8983/solr。</a><br><img src="/article_source/solr/img/solr.png" class="Solr视图" title="Solr视图"></p>
 <h2 id="索引数据"><a href="#索引数据" class="headerlink" title="索引数据"></a>索引数据</h2><h3 id="建立Core"><a href="#建立Core" class="headerlink" title="建立Core"></a>建立Core</h3><ul>
-<li>创建配置目录demo_config与demo核心</li>
+<li>创建配置目录demo_config与demo核心。</li>
 <li>在bin目录下输入solr create -c demo -d demo_config，显示如下语句表明创建成功。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Creating new core &apos;demo&apos; using command:</div><div class="line">http://localhost:8983/solr/admin/cores?action=CREATE&amp;name=demo&amp;instanceDir=demo</div><div class="line"> &#123;</div><div class="line"> &quot;responseHeader&quot;:&#123;</div><div class="line"> &quot;status&quot;:0,</div><div class="line"> &quot;QTime&quot;:952&#125;,</div><div class="line"> &quot;core&quot;:&quot;demo&quot;&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Core视图"><a href="#Core视图" class="headerlink" title="Core视图"></a>Core视图</h3><p>访问路径：<a href="http://localhost:8983/solr" target="_blank" rel="external">http://localhost:8983/solr</a><br><img src="/article_source/solr/img/solr.png" class="Core视图" title="Core视图"></p>
+<h3 id="Core视图"><a href="#Core视图" class="headerlink" title="Core视图"></a>Core视图</h3><p>访问路径：<a href="http://localhost:8983/solr。" target="_blank" rel="external">http://localhost:8983/solr。</a><br><img src="/article_source/solr/img/solr.png" class="Core视图" title="Core视图"></p>
 <h3 id="修改Schema"><a href="#修改Schema" class="headerlink" title="修改Schema"></a>修改Schema</h3><p>6.4版本没有schema.xml，只有managed-shcema。打开Core视图，点击Schema，如图。<br><img src="/article_source/solr/img/index_filed.png" class="修改Schema" title="添加索引字段视图"></p>
 <h3 id="索引数据-1"><a href="#索引数据-1" class="headerlink" title="索引数据"></a>索引数据</h3><ul>
 <li>定位目录到solr/example/exampledocs下</li>
 <li>在控制台输入java -Dtype=text/csv -Durl=<a href="http://localhost:8983/solr/demo/update" target="_blank" rel="external">http://localhost:8983/solr/demo/update</a> -jar post.jar books.csv<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SimplePostTool version 5.0.0</div><div class="line">Posting files to [base] url http://localhost:8983/solr/demo/update using content-</div><div class="line">type text/csv...</div><div class="line">POSTing file books.csv to [base]</div><div class="line">1 files indexed.</div><div class="line">COMMITting Solr index changes to http://localhost:8983/solr/demo/update...</div><div class="line">Time spent: 0:00:00.957</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="访问索引文档"><a href="#访问索引文档" class="headerlink" title="访问索引文档"></a>访问索引文档</h3><p>访问路径：<a href="http://localhost:8983/solr/demo/select?q=name:&quot;C" target="_blank" rel="external">http://localhost:8983/solr/demo/select?q=name:&quot;C</a>“<br><img src="/article_source/solr/img/name_xml.png" class="索引name字段" title="索引name字段"></p>
+<h3 id="访问索引文档"><a href="#访问索引文档" class="headerlink" title="访问索引文档"></a>访问索引文档</h3><p>访问路径：<a href="http://localhost:8983/solr/demo/select?q=name:&quot;C&quot;。" target="_blank" rel="external">http://localhost:8983/solr/demo/select?q=name:&quot;C&quot;。</a><br><img src="/article_source/solr/img/name_xml.png" class="索引name字段" title="索引name字段"></p>
 <h2 id="SpringBoot集成Solr"><a href="#SpringBoot集成Solr" class="headerlink" title="SpringBoot集成Solr"></a>SpringBoot集成Solr</h2><h3 id="添加maven依赖"><a href="#添加maven依赖" class="headerlink" title="添加maven依赖"></a>添加maven依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- solr 全文检索 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-solr<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="yml配置"><a href="#yml配置" class="headerlink" title="yml配置"></a>yml配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">spring:</div><div class="line">  data:</div><div class="line">    solr:</div><div class="line">      host: http://127.0.0.1:8983/solr/demo</div></pre></td></tr></table></figure>
 <h2 id="Spring-Data-for-Apache-Solr"><a href="#Spring-Data-for-Apache-Solr" class="headerlink" title="Spring Data for Apache Solr"></a>Spring Data for Apache Solr</h2><h3 id="Solr配置"><a href="#Solr配置" class="headerlink" title="Solr配置"></a>Solr配置</h3><p><em>SolrConfig.java</em><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.solr.client.solrj.SolrClient;</div><div class="line"><span class="keyword">import</span> org.apache.solr.client.solrj.impl.HttpSolrClient;</div><div class="line"><span class="keyword">import</span> org.springframework.boot.bind.RelaxedPropertyResolver;</div><div class="line"><span class="keyword">import</span> org.springframework.context.EnvironmentAware;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</div><div class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</div><div class="line"><span class="keyword">import</span> org.springframework.core.env.Environment;</div><div class="line"><span class="keyword">import</span> org.springframework.data.solr.repository.config.EnableSolrRepositories;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by milk.huchan on 2017/3/11.</div><div class="line"> * basePackages为SolrRepositories包路径，更换成你的包路径</div><div class="line"> */</div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="meta">@EnableSolrRepositories</span>(basePackages = <span class="string">"com.hc.core.solr"</span>, multicoreSupport=<span class="keyword">true</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SolrConfig</span> <span class="keyword">implements</span> <span class="title">EnvironmentAware</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> RelaxedPropertyResolver propertyResolver;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setEnvironment</span><span class="params">(Environment env)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.propertyResolver = <span class="keyword">new</span> RelaxedPropertyResolver(env, <span class="string">"spring.data.solr."</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> SolrClient <span class="title">solrClient</span><span class="params">()</span>  </span>&#123;</div><div class="line">        String solrHost = propertyResolver.getProperty(<span class="string">"host"</span>);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> HttpSolrClient(solrHost);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -325,7 +325,7 @@
         
             <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2017/03/12/uml类图/">
-                    uml类图
+                    UML类图
                 </a>
             </div>
         
@@ -405,7 +405,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/03/12/uml类图/" title="上一篇: uml类图">
+            <a href="/2017/03/12/uml类图/" title="上一篇: UML类图">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -419,7 +419,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/SpringBoot实现Validator国际化/">SpringBoot实现Validator，thymeleaf国际化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/SpringBoot实现jsr-303验证规范/">SpringBoot实现jsr-303验证规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/uml类图/">uml类图</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/webservice/">jersey+swagger的集成</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/计算机中常用名词解释/">java与web中常用名词解释</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/SpringBoot实现Validator国际化/">SpringBoot实现Validator，thymeleaf国际化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/SpringBoot实现jsr-303验证规范/">SpringBoot实现jsr-303验证规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/uml类图/">UML类图</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/webservice/">jersey+swagger的集成</a></li></ul>
 
 
 

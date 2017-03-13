@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="SpringBoot实现jsr-303验证规范初步教程！">
+<meta name="description" content="SpringBoot实现Jsr-303验证规范初步教程！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot实现jsr-303验证规范">
 <meta property="og:url" content="http://www.huchan.xyz/2017/03/12/SpringBoot实现jsr-303验证规范/index.html">
 <meta property="og:site_name" content="胡禅的博客">
-<meta property="og:description" content="SpringBoot实现jsr-303验证规范初步教程！">
+<meta property="og:description" content="SpringBoot实现Jsr-303验证规范初步教程！">
 <meta property="og:image" content="http://www.huchan.xyz/article_source/jsr-303/img/jsr-303.png">
-<meta property="og:updated_time" content="2017-03-12T17:27:23.058Z">
+<meta property="og:updated_time" content="2017-03-13T14:32:37.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot实现jsr-303验证规范">
-<meta name="twitter:description" content="SpringBoot实现jsr-303验证规范初步教程！">
+<meta name="twitter:description" content="SpringBoot实现Jsr-303验证规范初步教程！">
 <meta name="twitter:image" content="http://www.huchan.xyz/article_source/jsr-303/img/jsr-303.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -274,25 +274,25 @@
       
           
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="校验常用注解索引"><a href="#校验常用注解索引" class="headerlink" title="校验常用注解索引"></a>校验常用注解索引</h3><ul>
-<li><em>@AssertTrue</em> 用于<em>boolean</em>字段，该字段只能为<em>true</em></li>
-<li><em>@AssertFalse</em> 该字段的值只能为<em>false</em></li>
-<li><em>@CreditCardNumber</em> 对信用卡号进行一个大致的验证</li>
-<li><em>@DecimalMax</em> 只能小于或等于该值</li>
-<li><em>@DecimalMin</em> 只能大于或等于该值</li>
+<li><em>@AssertTrue</em> 用于<em>boolean</em>字段，该字段只能为<em>true</em>。</li>
+<li><em>@AssertFalse</em> 该字段的值只能为<em>false</em>。</li>
+<li><em>@CreditCardNumber</em> 对信用卡号进行一个大致的验证。</li>
+<li><em>@DecimalMax</em> 只能小于或等于该值。</li>
+<li><em>@DecimalMin</em> 只能大于或等于该值。</li>
 <li><em>@Digits(integer= 2 ,fraction= 20 )</em> 检查是否是一种数字的整数、分数,小数位数的数字。</li>
-<li><em>@Email</em> 检查是否是一个有效的<em>email</em>地址</li>
-<li><em>@Future</em> 检查该字段的日期是否是属于将来的日期</li>
-<li><em>@Length</em> (min=,max=) //检查所属的字段的长度是否在<em>min</em>和<em>max</em>之间,只能用于字符串</li>
-<li><em>@Max</em> 该字段的值只能小于或等于该值</li>
-<li><em>@Min</em> 该字段的值只能大于或等于该值</li>
-<li><em>@NotNull</em> 不能为<em>null</em></li>
-<li><em>@NotBlank</em> 不能为空，检查时会将空格忽略</li>
-<li><em>@NotEmpty</em> 不能为空，这里的空是指空字符串</li>
-<li><em>@Null</em> 检查该字段为空</li>
-<li><em>@Past</em> 检查该字段的日期是在过去</li>
-<li><em>@Size(min=, max=)</em> 检查该字段的size是否在<em>min</em>和<em>max</em>之间，可以是字符串、数组、集合、<em>Map</em>等</li>
-<li><em>@URL(protocol=,host,port)</em> 检查是否是一个有效的<em>URL</em>，如果提供了<em>protocol</em> ，<em>host</em>等，则该<em>URL</em>还需满足提供的条件</li>
-<li><em>@Valid</em> 该注解只要用于字段为一个包含其他对象的集合或<em>map</em>或数组的字段，或该字段直接为一个其他对象的引用，这样在检查当前对象的同时也会检查该字段所引用的对象<h2 id="添加maven依赖"><a href="#添加maven依赖" class="headerlink" title="添加maven依赖"></a>添加maven依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- jsr-303 验证框架 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-validation<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<li><em>@Email</em> 检查是否是一个有效的<em>email</em>地址。</li>
+<li><em>@Future</em> 检查该字段的日期是否是属于将来的日期。</li>
+<li><em>@Length</em> (min=,max=) //检查所属的字段的长度是否在<em>min</em>和<em>max</em>之间,只能用于字符串。</li>
+<li><em>@Max</em> 该字段的值只能小于或等于该值。</li>
+<li><em>@Min</em> 该字段的值只能大于或等于该值。</li>
+<li><em>@NotNull</em> 不能为<em>null</em>。</li>
+<li><em>@NotBlank</em> 不能为空，检查时会将空格忽略。</li>
+<li><em>@NotEmpty</em> 不能为空，这里的空是指空字符串。</li>
+<li><em>@Null</em> 检查该字段为空。</li>
+<li><em>@Past</em> 检查该字段的日期是在过去。</li>
+<li><em>@Size(min=, max=)</em> 检查该字段的size是否在<em>min</em>和<em>max</em>之间，可以是字符串、数组、集合、<em>Map</em>等。</li>
+<li><em>@URL(protocol=,host,port)</em> 检查是否是一个有效的<em>URL</em>，如果提供了<em>protocol</em> ，<em>host</em>等，则该<em>URL</em>还需满足提供的条件。</li>
+<li><em>@Valid</em> 该注解只要用于字段为一个包含其他对象的集合或<em>map</em>或数组的字段，或该字段直接为一个其他对象的引用，这样在检查当前对象的同时也会检查该字段所引用的对象。<h2 id="添加maven依赖"><a href="#添加maven依赖" class="headerlink" title="添加maven依赖"></a>添加maven依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- jsr-303 验证框架 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-validation<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="注入校验器"><a href="#注入校验器" class="headerlink" title="注入校验器"></a>注入校验器</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@SpringBootApplication</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MilkApplication</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		SpringApplication.run(MilkApplication.class, args);</div><div class="line">	&#125;</div><div class="line">	<span class="meta">@Bean</span></div><div class="line">	<span class="function"><span class="keyword">public</span> MethodValidationPostProcessor <span class="title">methodValidationPostProcessor</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> MethodValidationPostProcessor();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -323,7 +323,7 @@
         
             <div id="article-nav-older" class="article-nav-title">
                 <a href="/2017/03/12/uml类图/">
-                    uml类图
+                    UML类图
                 </a>
             </div>
         
@@ -404,13 +404,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/03/12/uml类图/" title="下一篇: uml类图">
+            <a href="/2017/03/12/uml类图/" title="下一篇: UML类图">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/SpringBoot实现Validator国际化/">SpringBoot实现Validator，thymeleaf国际化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/SpringBoot实现jsr-303验证规范/">SpringBoot实现jsr-303验证规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/uml类图/">uml类图</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/webservice/">jersey+swagger的集成</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/计算机中常用名词解释/">java与web中常用名词解释</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/SpringBoot实现Validator国际化/">SpringBoot实现Validator，thymeleaf国际化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/SpringBoot实现jsr-303验证规范/">SpringBoot实现jsr-303验证规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/12/uml类图/">UML类图</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/SpringBoot集成Solr/">SpringBoot集成Solr</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/10/设计模式六大原则/">设计模式六大原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/webservice/">jersey+swagger的集成</a></li></ul>
 
 
 
