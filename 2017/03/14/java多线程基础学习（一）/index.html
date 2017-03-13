@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/index.html">
 <meta property="og:site_name" content="胡禅的博客">
 <meta property="og:description" content="java多线程基础学习笔记！">
-<meta property="og:updated_time" content="2017-03-13T18:01:14.060Z">
+<meta property="og:updated_time" content="2017-03-13T18:03:07.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java多线程基础学习（一）">
 <meta name="twitter:description" content="java多线程基础学习笔记！">
@@ -274,10 +274,11 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习多线程之前，了解下以下概念:</p>
 <ul>
 <li>并行：多个cpu实例或者多台机器同时执行一段处理逻辑，是真正的同时，如2个CPU跑2个程序，程序结果完全一样，花费的时间一样。</li>
-<li>并发：通过cpu调度算法，让用户看上去同时执行，实际上从cpu操作层面不是真正的同时(宏观上是同时,微观上仍是顺序执行)。并发往往在场景中有公用的资源，那么针对这个公用的资源往往产生瓶颈，我们会用TPS或者QPS来反应这个系统的处理能力，如一个CPU跑两个程序(cpu轮换着执行)，花费的时间为上面的2倍。</li>
-<li>进程与线程区别：主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3></li>
+<li>并发：通过cpu调度算法，让用户看上去同时执行，实际上从cpu操作层面不是真正的同时(宏观上是同时,微观上仍是顺序执行)。并发往往在场景中有公用的资源，那么针对这个公用的资源往往产生瓶颈，我们会用TPS或者QPS来反应这个系统的处理能力，如一个CPU跑两个程序(cpu轮换着执行)，花费的时间为上面的2倍。<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3></li>
 <li>进程：系统进行资源分配和调度的一个独立单位。</li>
-<li>线程：是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位。<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3>一个进程内的内存空间是共享的，每个线程都可以使用这些共享内存，线程是进程的子集，线程和进程一样分为五个阶段：创建、就绪、运行、阻塞、终止。<br>如果对线程与进程的关系不清晰的，传送门<a href="http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html，通俗易懂。" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html，通俗易懂。</a><h3 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h3></li>
+<li>线程：是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位。<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3></li>
+<li>一个进程内的内存空间是共享的，每个线程都可以使用这些共享内存，线程是进程的子集，线程和进程一样分为五个阶段：创建、就绪、运行、阻塞、终止。</li>
+<li>进程与线程区别：主要差别在于它们是不同的操作系统资源管理方式。进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个线程死掉就等于整个进程死掉，所以多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。但对于一些要求同时进行并且又要共享某些变量的并发操作，只能用线程，不能用进程。<br>如果对线程与进程的关系不清晰的，传送门<a href="http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html，通俗易懂。" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html，通俗易懂。</a><h3 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h3></li>
 <li>新建状态(New)：新创建了一个线程对象。</li>
 <li>就绪状态(Runnable)：线程对象创建后，其他线程调用了该对象的start()方法。该状态的线程位于可运行线程池中，变得可运行，等待获取CPU的使用权。</li>
 <li>运行状态(Running)：就绪状态的线程获取了CPU，执行程序代码。</li>
