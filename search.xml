@@ -222,9 +222,9 @@
         
         <tags>
             
-            <tag> SpringBoot </tag>
-            
             <tag> Apahce Solr </tag>
+            
+            <tag> SpringBoot </tag>
             
         </tags>
         
@@ -329,12 +329,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[标签云]]></title>
-      <url>http://www.huchan.xyz/tags/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
       <content type="html"><![CDATA[<p>我是一名java程序猿，专注于Web开发，从事web开发工作至今已有接近2年，擅长的技能：</p>
@@ -355,6 +349,12 @@
 </ul>
 </blockquote>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[标签云]]></title>
+      <url>http://www.huchan.xyz/tags/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
