@@ -377,23 +377,8 @@
     <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
-      <content type="html"><![CDATA[<p>我是一名java程序猿，专注于Web开发，从事web开发工作至今已有接近2年，擅长的技能：</p>
-<blockquote>
-<ul>
-<li>springmvc</li>
-<li>mybatis</li>
-<li>hibernate</li>
-<li>jsr-303</li>
-<li>shiro</li>
-<li>solr</li>
-<li>jersey</li>
-<li>swagger</li>
-<li>redis</li>
-<li>jquery</li>
-<li>html/css</li>
-<li>mysql</li>
-</ul>
-</blockquote>
+      <content type="html"><![CDATA[<blockquote><p>我的名字叫胡禅，英文名叫milk，昵称小寒。从大学毕业陆陆续续实习到工作已经快2年了，感觉自己成长了很多。作为一名计算机专业(不是修电脑的)毕业的学生感觉自己的路还有很长，越是接触的越深，越感觉自己渺小(感觉自己好菜)。知识永远学不完，技术永远在更新，学习的心却从未改变，坚信自己的道路，走向更开阔的人生。渴望接触更加广阔的平台，接触更多的大牛(抱抱大腿)。处理好生活中的每一个细节，让自己的人生变得更加的精致。</p>
+<footer><strong>胡禅</strong><cite><a href="http://www.huchan.xyz">www.huchan.xyz</a></cite></footer></blockquote>
 ]]></content>
     </entry>
     
