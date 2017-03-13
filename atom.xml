@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huchan.xyz/"/>
-  <updated>2017-03-13T18:03:07.820Z</updated>
+  <updated>2017-03-13T18:04:21.084Z</updated>
   <id>http://www.huchan.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.huchan.xyz/2017/03/14/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/</id>
     <published>2017-03-13T16:09:14.000Z</published>
-    <updated>2017-03-13T18:03:07.820Z</updated>
+    <updated>2017-03-13T18:04:21.084Z</updated>
     
     <summary type="html">
     
@@ -119,9 +119,9 @@
       <category term="UML" scheme="http://www.huchan.xyz/categories/UML/"/>
     
     
-      <category term="总结" scheme="http://www.huchan.xyz/tags/%E6%80%BB%E7%BB%93/"/>
-    
       <category term="UML类图" scheme="http://www.huchan.xyz/tags/UML%E7%B1%BB%E5%9B%BE/"/>
+    
+      <category term="总结" scheme="http://www.huchan.xyz/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
