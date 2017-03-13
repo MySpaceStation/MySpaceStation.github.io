@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>小寒的博客</title>
+  <title>胡禅的博客</title>
   <subtitle>IT菜鸟成长记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huchan.xyz/"/>
-  <updated>2017-03-13T06:34:34.074Z</updated>
+  <updated>2017-03-13T09:42:20.263Z</updated>
   <id>http://www.huchan.xyz/</id>
   
   <author>
-    <name>小寒</name>
+    <name>胡禅</name>
     
   </author>
   
@@ -20,7 +20,7 @@
     <link href="http://www.huchan.xyz/2017/03/13/SpringBoot%E5%AE%9E%E7%8E%B0Validator%E5%9B%BD%E9%99%85%E5%8C%96/"/>
     <id>http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/</id>
     <published>2017-03-12T18:52:06.000Z</published>
-    <updated>2017-03-13T06:34:34.074Z</updated>
+    <updated>2017-03-13T09:42:20.263Z</updated>
     
     <summary type="html">
     
@@ -99,9 +99,9 @@
       <category term="全文检索" scheme="http://www.huchan.xyz/categories/%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2/"/>
     
     
-      <category term="Apahce Solr" scheme="http://www.huchan.xyz/tags/Apahce-Solr/"/>
-    
       <category term="SpringBoot" scheme="http://www.huchan.xyz/tags/SpringBoot/"/>
+    
+      <category term="Apahce Solr" scheme="http://www.huchan.xyz/tags/Apahce-Solr/"/>
     
   </entry>
   

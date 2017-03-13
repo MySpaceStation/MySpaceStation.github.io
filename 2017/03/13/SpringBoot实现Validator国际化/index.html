@@ -11,7 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
-<meta name="author" content="小寒" />
+<meta name="author" content="胡禅" />
 
 
 
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot实现Validator，thymeleaf国际化">
 <meta property="og:url" content="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/index.html">
-<meta property="og:site_name" content="小寒的博客">
+<meta property="og:site_name" content="胡禅的博客">
 <meta property="og:description" content="SpringBoot实现Validator, thymeleaf国际化与添加自定义注解验证教程！">
 <meta property="og:image" content="http://www.huchan.xyz/article_source/i18n/img/i18n_properties.png">
 <meta property="og:image" content="http://www.huchan.xyz/article_source/i18n/img/i18n_messages.png">
-<meta property="og:updated_time" content="2017-03-13T06:34:34.074Z">
+<meta property="og:updated_time" content="2017-03-13T09:42:20.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot实现Validator，thymeleaf国际化">
 <meta name="twitter:description" content="SpringBoot实现Validator, thymeleaf国际化与添加自定义注解验证教程！">
@@ -32,7 +32,7 @@
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="小寒的博客" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="胡禅的博客" type="application/atom+xml">
 
 
 
@@ -59,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>SpringBoot实现Validator，thymeleaf国际化 | 小寒的博客</title>
+<title>SpringBoot实现Validator，thymeleaf国际化 | 胡禅的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -106,7 +106,7 @@
             <img src="/img/headPortrait_2.png" class="animated zoomIn">
         </a>
         <hgroup>
-          <h1 class="header-author"><a href="/">小寒</a></h1>
+          <h1 class="header-author"><a href="/">胡禅</a></h1>
         </hgroup>
 
         
@@ -180,7 +180,7 @@
       <nav id="mobile-nav">
       <div class="overlay">
           <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">小寒</a></h1>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">胡禅</a></h1>
       </div>
     <div class="intrude-less">
         <header id="header" class="inner">
@@ -188,7 +188,7 @@
                 <img src="/img/headPortrait_2.png" class="animated zoomIn">
             </a>
             <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">小寒</a></h1>
+              <h1 class="header-author"><a href="/" title="回到主页">胡禅</a></h1>
             </hgroup>
             
             <p class="header-subtitle">IT菜鸟成长记</p>
@@ -276,7 +276,7 @@
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="国际化消息key"><a href="#国际化消息key" class="headerlink" title="国际化消息key"></a>国际化消息key</h3><ul>
 <li>在messages_zh_CN.properties文件中添加welcome = 你好，世界！，person.age.NotNull = 名字不能为空！</li>
 <li>在Person.java中字段age添加注解@NotNull(message = “{person.age.NotNull}”)<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3>访问路径: <a href="http://localhost:520/system/form" target="_blank" rel="external">http://localhost:520/system/form</a>, 输入name和age。<img src="/article_source/i18n/img/i18n_messages.png" class="国际化消息显示测试图" title="国际化消息显示测试图">
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
+<h3 id="自定义注解验证"><a href="#自定义注解验证" class="headerlink" title="自定义注解验证"></a>自定义注解验证</h3><em>待续…</em><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
 </ul>
 <p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/">http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/</a> </p>
 
@@ -305,7 +305,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#国际化"><span class="toc-number">2.</span> <span class="toc-text">国际化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#i18n资源文件"><span class="toc-number">2.1.</span> <span class="toc-text">i18n资源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i18n配置"><span class="toc-number">2.2.</span> <span class="toc-text">i18n配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#国际化消息key"><span class="toc-number">3.1.</span> <span class="toc-text">国际化消息key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-number">3.2.</span> <span class="toc-text">测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">4.</span> <span class="toc-text">结语</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#国际化"><span class="toc-number">2.</span> <span class="toc-text">国际化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#i18n资源文件"><span class="toc-number">2.1.</span> <span class="toc-text">i18n资源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i18n配置"><span class="toc-number">2.2.</span> <span class="toc-text">i18n配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#国际化消息key"><span class="toc-number">3.1.</span> <span class="toc-text">国际化消息key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-number">3.2.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义注解验证"><span class="toc-number">3.3.</span> <span class="toc-text">自定义注解验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">4.</span> <span class="toc-text">结语</span></a></li></ol>
         
     </div>
     <style>
@@ -392,7 +392,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i>
-                2017 小寒
+                2017 胡禅
             </div>
         </div>
         

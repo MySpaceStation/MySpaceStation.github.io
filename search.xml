@@ -18,7 +18,7 @@
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="国际化消息key"><a href="#国际化消息key" class="headerlink" title="国际化消息key"></a>国际化消息key</h3><ul>
 <li>在messages_zh_CN.properties文件中添加welcome = 你好，世界！，person.age.NotNull = 名字不能为空！</li>
 <li>在Person.java中字段age添加注解@NotNull(message = “{person.age.NotNull}”)<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3>访问路径: <a href="http://localhost:520/system/form" target="_blank" rel="external">http://localhost:520/system/form</a>, 输入name和age。<img src="/article_source/i18n/img/i18n_messages.png" class="国际化消息显示测试图" title="国际化消息显示测试图">
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
+<h3 id="自定义注解验证"><a href="#自定义注解验证" class="headerlink" title="自定义注解验证"></a>自定义注解验证</h3><em>待续…</em><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
 </ul>
 <p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/">http://www.huchan.xyz/2017/03/13/SpringBoot实现Validator国际化/</a> </p>
 ]]></content>
@@ -222,9 +222,9 @@
         
         <tags>
             
-            <tag> Apahce Solr </tag>
-            
             <tag> SpringBoot </tag>
+            
+            <tag> Apahce Solr </tag>
             
         </tags>
         
@@ -329,6 +329,12 @@
     </entry>
     
     <entry>
+      <title><![CDATA[标签云]]></title>
+      <url>http://www.huchan.xyz/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
       <content type="html"><![CDATA[<p>我是一名java程序猿，专注于Web开发，从事web开发工作至今已有接近2年，擅长的技能：</p>
@@ -349,12 +355,6 @@
 </ul>
 </blockquote>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[标签云]]></title>
-      <url>http://www.huchan.xyz/tags/index.html</url>
-      <content type="html"></content>
     </entry>
     
   
