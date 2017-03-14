@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title><![CDATA[单例模式]]></title>
+      <url>http://www.huchan.xyz/2017/03/14/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Singleton是一种创建型模式，指某个类采用Singleton模式，则在这个类被创建后，只可能产生一个实例供外部访问，并且提供一个全局的访问点。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ul>
+<li>将采用单例设计模式的类的构造方法私有化（采用private修饰）。</li>
+<li>在其内部产生该类的实例化对象，并将其封装成private static类型。</li>
+<li>定义一个静态方法返回该类的实例。<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 方法一</div><div class="line"> * 单例模式的实现：饿汉式，线程安全，但效率较低</div><div class="line"> * 优点：不存在多线程同步问题，避免了synchronized所造成的性能问题</div><div class="line"> * 缺点：类SingletonTest被加载时，会初始化static的instance，静态变量被创建并分配内存空间，占用内存，只有类被卸载时，静态变量被摧毁，并释放所占有的内存</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonTest</span> </span>&#123;</div><div class="line">    <span class="comment">//实例化</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> SingletonTest instance = <span class="keyword">new</span> SingletonTest();</div><div class="line">    <span class="comment">//构造方法私有化</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonTest</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//静态方法返回实例</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonTest <span class="title">newSingletonTest</span><span class="params">(SingletonTest instance)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 方法二</div><div class="line"> * 单例模式的实现：饱汉式，非线程安全</div><div class="line"> * 优点：节约内存</div><div class="line"> * 缺点：并发环境可能会出现重复初始化问题</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonTest1</span> </span>&#123;</div><div class="line">    <span class="comment">//定义类型为SingletonTest1静态变量</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> SingletonTest1 instance;</div><div class="line"></div><div class="line">    <span class="comment">//构造方法私有化</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonTest1</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//静态方法返回实例 多线程访问时，可能会出现重复初始化问题</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonTest1 <span class="title">newSingletonTest</span><span class="params">(SingletonTest1 instance)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> (instance == <span class="keyword">null</span>) ? <span class="keyword">new</span> SingletonTest1() : instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 方法三</div><div class="line"> * 单例模式的实现：饱汉式，线程安全</div><div class="line"> * 优点：使用synchronized关键字避免多线程访问，出现多个实例</div><div class="line"> * 缺点：同步方法频繁被调用，效率低</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonTest2</span> </span>&#123;</div><div class="line">    <span class="comment">//定义类型为SingletonTest2静态变量</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingletonTest2 instance;</div><div class="line">    <span class="comment">//构造方法私有化</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonTest2</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//静态方法返回实例 同步方法频繁被调用，效率低</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> SingletonTest2 <span class="title">newSingletonTest</span><span class="params">(SingletonTest2 instance)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> (instance == <span class="keyword">null</span>) ? <span class="keyword">new</span> SingletonTest2() : instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 方法四</div><div class="line"> * 优点：内存占用低，效率高，线程安全，多线程操作原子性</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonTest3</span> </span>&#123;</div><div class="line">    <span class="comment">//定义类型为SingletonTest3静态变量，使用volatile保证了多线程访问时instance变量的可见性，避免了instance初始化时其他变量属性还没赋值完时，被另外线程调用)</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> SingletonTest3 instance;</div><div class="line"></div><div class="line">    <span class="comment">//构造方法私有化</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonTest3</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//静态方法返回实例</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonTest3 <span class="title">newSingletonTest</span><span class="params">(SingletonTest3 instance)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</div><div class="line">            <span class="comment">//同步代码块 保证多线程在访问对象时第一次被创建后不再被重复创建</span></div><div class="line">            <span class="keyword">synchronized</span> (SingletonTest3.class)&#123;</div><div class="line">                <span class="comment">//未初始化，则初始化instance变量</span></div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>)&#123;</div><div class="line">                    instance = <span class="keyword">new</span> SingletonTest3();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>方法一、三、四为线程安全且方法四方案最优，方法二非线程安全。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></p>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/14/单例模式/">http://www.huchan.xyz/2017/03/14/单例模式/</a> </p>
+]]></content>
+      
+        <categories>
+            
+            <category> 设计模式 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 学习笔记 </tag>
+            
+            <tag> 单例模式 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[java多线程基础学习（一）]]></title>
       <url>http://www.huchan.xyz/2017/03/14/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习多线程之前，了解下以下概念:</p>
@@ -25,7 +60,7 @@
 <li>其他阻塞：运行的线程执行sleep()或join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状</li>
 </ol>
 <ul>
-<li>死亡状态（Dead）：线程执行完了或者因异常退出了run()方法，该线程结束生命周期。<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3>一个程序(进程)运行时产生了不止一个线程<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3>java实现多线程有2种方式，继承Thread类，或者实现Runable接口。<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
+<li>死亡状态（Dead）：线程执行完了或者因异常退出了run()方法，该线程结束生命周期。<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3>一个程序(进程)运行时产生了不止一个线程<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3>java实现多线程有2种方式，继承Thread类，或者实现Runnable接口。<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
 </ul>
 <p>文章链接 <a href="http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/">http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/</a> </p>
 ]]></content>
@@ -39,9 +74,9 @@
         
         <tags>
             
-            <tag> 学习笔记 </tag>
-            
             <tag> 多线程 </tag>
+            
+            <tag> 学习笔记 </tag>
             
         </tags>
         
@@ -256,9 +291,9 @@
         
         <tags>
             
-            <tag> UML类图 </tag>
-            
             <tag> 总结 </tag>
+            
+            <tag> UML类图 </tag>
             
         </tags>
         

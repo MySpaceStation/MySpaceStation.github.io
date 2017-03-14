@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huchan.xyz/"/>
-  <updated>2017-03-13T18:04:21.084Z</updated>
+  <updated>2017-03-14T04:32:07.667Z</updated>
   <id>http://www.huchan.xyz/</id>
   
   <author>
@@ -16,11 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>单例模式</title>
+    <link href="http://www.huchan.xyz/2017/03/14/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.huchan.xyz/2017/03/14/单例模式/</id>
+    <published>2017-03-13T18:06:57.000Z</published>
+    <updated>2017-03-14T04:32:07.667Z</updated>
+    
+    <summary type="html">
+    
+      java设计模式-单例模式学习笔记！
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.huchan.xyz/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="学习笔记" scheme="http://www.huchan.xyz/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="单例模式" scheme="http://www.huchan.xyz/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>java多线程基础学习（一）</title>
     <link href="http://www.huchan.xyz/2017/03/14/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/</id>
     <published>2017-03-13T16:09:14.000Z</published>
-    <updated>2017-03-13T18:04:21.084Z</updated>
+    <updated>2017-03-13T18:12:40.044Z</updated>
     
     <summary type="html">
     
@@ -31,9 +53,9 @@
       <category term="Java" scheme="http://www.huchan.xyz/categories/Java/"/>
     
     
-      <category term="学习笔记" scheme="http://www.huchan.xyz/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="多线程" scheme="http://www.huchan.xyz/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="学习笔记" scheme="http://www.huchan.xyz/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -119,9 +141,9 @@
       <category term="UML" scheme="http://www.huchan.xyz/categories/UML/"/>
     
     
-      <category term="UML类图" scheme="http://www.huchan.xyz/tags/UML%E7%B1%BB%E5%9B%BE/"/>
-    
       <category term="总结" scheme="http://www.huchan.xyz/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="UML类图" scheme="http://www.huchan.xyz/tags/UML%E7%B1%BB%E5%9B%BE/"/>
     
   </entry>
   

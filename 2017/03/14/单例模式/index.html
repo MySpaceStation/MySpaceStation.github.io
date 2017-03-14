@@ -15,18 +15,16 @@
 
 
 
-<meta name="description" content="收录java与web中常用名词，持续更新！">
+<meta name="description" content="java设计模式-单例模式学习笔记！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java与web中常用名词解释">
-<meta property="og:url" content="http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/index.html">
+<meta property="og:title" content="单例模式">
+<meta property="og:url" content="http://www.huchan.xyz/2017/03/14/单例模式/index.html">
 <meta property="og:site_name" content="胡禅的博客">
-<meta property="og:description" content="收录java与web中常用名词，持续更新！">
-<meta property="og:image" content="http://www.huchan.xyz/article_source/note/img/domain.png">
-<meta property="og:updated_time" content="2017-03-13T15:12:49.183Z">
+<meta property="og:description" content="java设计模式-单例模式学习笔记！">
+<meta property="og:updated_time" content="2017-03-14T04:32:07.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java与web中常用名词解释">
-<meta name="twitter:description" content="收录java与web中常用名词，持续更新！">
-<meta name="twitter:image" content="http://www.huchan.xyz/article_source/note/img/domain.png">
+<meta name="twitter:title" content="单例模式">
+<meta name="twitter:description" content="java设计模式-单例模式学习笔记！">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>java与web中常用名词解释 | 胡禅的博客</title>
+<title>单例模式 | 胡禅的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -229,11 +227,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-计算机中常用名词解释" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-单例模式" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/13/计算机中常用名词解释/" class="article-date">
-      <time datetime="2017-03-13T13:06:19.000Z" itemprop="datePublished">2017-03-13</time>
+      <a href="/2017/03/14/单例模式/" class="article-date">
+      <time datetime="2017-03-13T18:06:57.000Z" itemprop="datePublished">2017-03-14</time>
 </a>
 
 
@@ -248,7 +246,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      java与web中常用名词解释
+      单例模式
     </h1>
   
 
@@ -257,13 +255,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/名词解释/">名词解释</a>
+    <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/单例模式/">单例模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -273,28 +271,19 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文持续更新，用于收录一些计算机中遇到的常用名词。</p>
-<h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><ul>
-<li>VO(Value Object)： 值对象，用new关键字创建，由GC回收的，存活在业务层的，是业务逻辑使用的，它存活的目的就是为数据提供一个生存的地方。</li>
-<li>PO(Persisent Object)：持久对象，向数据库中添加新数据时创建，删除数据库中数据时消除。并且它只能存活在一个数据库连接中，断开连接即被销毁。</li>
-<li>DO(Domain Object)：领域对象，就是从现实世界中抽象出来的有形或无形的业务实体。</li>
-<li>DTO(Data Transfer Object)：数据传输对象，主要用于远程调用等需要大量传输对象的地方，客户端用webservice获取数据，此时传输的数据对象为DTO。</li>
-<li>BO(Business Object)：业务对象，主要作用是把业务逻辑封装为一个对象。这个对象可以包括一个或多个其它的对象。</li>
-<li>TO(Transfer Object)：数据传输对象，在应用程序不同tie(关系)之间传输的对象。</li>
-<li>QO(Query Object)：查询对象。</li>
-<li>POJO(Plain Ordinary Java Object)：简单无规则java对象，在一些ORM中能够做到维护数据库表记录的PO完全是一个符合java Bean规范的纯java对象，只有属性字段及setter和getter方法,用于输出自身数据的toString方法，没有增加别的属性和方法。</li>
-<li>DAO(Data Access Object)：数据访问对象，是一个sun的一个标准j2ee设计模式，这个模式中有个接口就是DAO，它负持久层的操作。为业务层提供接口。此对象用于访问数据库。通常和PO结合使用，DAO中包含了各种数据库的操作方法。通过它的方法，结合PO对数据库进行相关的操作。夹在业务逻辑与数据库资源中间。配合VO, 提供数据库的CRUD操作。</li>
-<li>ORM(Object Relational Mapping)：对象关系映射，可以生成所有的关于对象保存，删除，读取的SQL语句。</li>
-<li>心跳机制：定时发送一个自定义的结构体(心跳包)，让对方知道自己还活着，以确保连接的有效性的机制。</li>
-<li>悲观锁：顾名思义，就是很悲观，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会block直到它拿到传统的关系型数据库里边就用到了很多这种锁机制，比如行锁，表锁等，读锁，写锁等，都是在做操作之前先上锁。</li>
-<li>乐观锁：顾名思义，就是很乐观，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号等机制。乐观锁适用于多读的应用类型，这样可以提高吞吐量，像数据库如果提供类似于write_condition机制的其实都是提供的乐观锁。</li>
-<li>死锁：多个线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。由于线程被无限期地阻塞，因此程序不能正常运行。<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2></li>
-<li>分布式：一个业务分拆多个子业务，部署在不同的服务器上。</li>
-<li>集群：同一个业务，部署在多个服务器上。</li>
-<li>负载均衡：是分布式系统架构设计中必须考虑的因素之一，它通常是指，将请求/数据【均匀】分摊到多个操作单元上执行，负载均衡的关键在于【均匀】。常见互联网分布式架构如上，分为客户端层、反向代理nginx层、站点层、服务层、数据层。<h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><img src="/article_source/note/img/domain.png" class="验证测试图" title="验证测试图">
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Singleton是一种创建型模式，指某个类采用Singleton模式，则在这个类被创建后，只可能产生一个实例供外部访问，并且提供一个全局的访问点。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ul>
+<li>将采用单例设计模式的类的构造方法私有化（采用private修饰）。</li>
+<li>在其内部产生该类的实例化对象，并将其封装成private static类型。</li>
+<li>定义一个静态方法返回该类的实例。<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 方法一</div><div class="line"> * 单例模式的实现：饿汉式，线程安全，但效率较低</div><div class="line"> * 优点：不存在多线程同步问题，避免了synchronized所造成的性能问题</div><div class="line"> * 缺点：类SingletonTest被加载时，会初始化static的instance，静态变量被创建并分配内存空间，占用内存，只有类被卸载时，静态变量被摧毁，并释放所占有的内存</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonTest</span> </span>&#123;</div><div class="line">    <span class="comment">//实例化</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> SingletonTest instance = <span class="keyword">new</span> SingletonTest();</div><div class="line">    <span class="comment">//构造方法私有化</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonTest</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//静态方法返回实例</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonTest <span class="title">newSingletonTest</span><span class="params">(SingletonTest instance)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/">http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/</a> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 方法二</div><div class="line"> * 单例模式的实现：饱汉式，非线程安全</div><div class="line"> * 优点：节约内存</div><div class="line"> * 缺点：并发环境可能会出现重复初始化问题</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonTest1</span> </span>&#123;</div><div class="line">    <span class="comment">//定义类型为SingletonTest1静态变量</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> SingletonTest1 instance;</div><div class="line"></div><div class="line">    <span class="comment">//构造方法私有化</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonTest1</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//静态方法返回实例 多线程访问时，可能会出现重复初始化问题</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonTest1 <span class="title">newSingletonTest</span><span class="params">(SingletonTest1 instance)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> (instance == <span class="keyword">null</span>) ? <span class="keyword">new</span> SingletonTest1() : instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 方法三</div><div class="line"> * 单例模式的实现：饱汉式，线程安全</div><div class="line"> * 优点：使用synchronized关键字避免多线程访问，出现多个实例</div><div class="line"> * 缺点：同步方法频繁被调用，效率低</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonTest2</span> </span>&#123;</div><div class="line">    <span class="comment">//定义类型为SingletonTest2静态变量</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingletonTest2 instance;</div><div class="line">    <span class="comment">//构造方法私有化</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonTest2</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//静态方法返回实例 同步方法频繁被调用，效率低</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> SingletonTest2 <span class="title">newSingletonTest</span><span class="params">(SingletonTest2 instance)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> (instance == <span class="keyword">null</span>) ? <span class="keyword">new</span> SingletonTest2() : instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 方法四</div><div class="line"> * 优点：内存占用低，效率高，线程安全，多线程操作原子性</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonTest3</span> </span>&#123;</div><div class="line">    <span class="comment">//定义类型为SingletonTest3静态变量，使用volatile保证了多线程访问时instance变量的可见性，避免了instance初始化时其他变量属性还没赋值完时，被另外线程调用)</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> SingletonTest3 instance;</div><div class="line"></div><div class="line">    <span class="comment">//构造方法私有化</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonTest3</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//静态方法返回实例</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonTest3 <span class="title">newSingletonTest</span><span class="params">(SingletonTest3 instance)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(instance == <span class="keyword">null</span>)&#123;</div><div class="line">            <span class="comment">//同步代码块 保证多线程在访问对象时第一次被创建后不再被重复创建</span></div><div class="line">            <span class="keyword">synchronized</span> (SingletonTest3.class)&#123;</div><div class="line">                <span class="comment">//未初始化，则初始化instance变量</span></div><div class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>)&#123;</div><div class="line">                    instance = <span class="keyword">new</span> SingletonTest3();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>方法一、三、四为线程安全且方法四方案最优，方法二非线程安全。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></p>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/14/单例模式/">http://www.huchan.xyz/2017/03/14/单例模式/</a> </p>
 
       
     </div>
@@ -306,16 +295,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/03/14/java多线程基础学习（一）/">
-                    java多线程基础学习（一）
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/03/13/SpringBoot实现Validator国际化/">
-                    SpringBoot实现Validator，thymeleaf国际化
+                <a href="/2017/03/14/java多线程基础学习（一）/">
+                    java多线程基础学习（一）
                 </a>
             </div>
         
@@ -327,7 +310,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">2.</span> <span class="toc-text">java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web"><span class="toc-number">3.</span> <span class="toc-text">web</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图解"><span class="toc-number">4.</span> <span class="toc-text">图解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">5.</span> <span class="toc-text">结语</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-number">2.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">5.</span> <span class="toc-text">结语</span></a></li></ol>
         
     </div>
     <style>
@@ -364,7 +347,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/13/计算机中常用名词解释/" data-title="java与web中常用名词解释" data-url="http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/14/单例模式/" data-title="单例模式" data-url="http://www.huchan.xyz/2017/03/14/单例模式/"></div>
     <script>
         var duoshuoQuery = {short_name:"myspacestation"};
         var loadComment = function(){
@@ -388,15 +371,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/03/14/java多线程基础学习（一）/" title="上一篇: java多线程基础学习（一）">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/03/13/SpringBoot实现Validator国际化/" title="下一篇: SpringBoot实现Validator，thymeleaf国际化">
+            <a href="/2017/03/14/java多线程基础学习（一）/" title="下一篇: java多线程基础学习（一）">
                 <i class="fa fa-angle-right"></i>
             </a>
         
