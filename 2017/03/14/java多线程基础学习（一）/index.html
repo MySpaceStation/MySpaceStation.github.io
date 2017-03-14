@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://www.huchan.xyz/2017/03/14/java多线程基础学习（一）/index.html">
 <meta property="og:site_name" content="胡禅的博客">
 <meta property="og:description" content="java多线程基础学习笔记！">
-<meta property="og:updated_time" content="2017-03-13T18:12:40.044Z">
+<meta property="og:updated_time" content="2017-03-14T05:35:37.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java多线程基础学习（一）">
 <meta name="twitter:description" content="java多线程基础学习笔记！">
@@ -287,7 +287,7 @@
 <ol>
 <li>等待阻塞：运行的线程执行wait()方法，JVM会把该线程放入等待池中。</li>
 <li>同步阻塞：运行的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则JVM会把该线程放入锁池中。</li>
-<li>其他阻塞：运行的线程执行sleep()或join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状</li>
+<li>其他阻塞：运行的线程执行sleep()或join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。</li>
 </ol>
 <ul>
 <li>死亡状态（Dead）：线程执行完了或者因异常退出了run()方法，该线程结束生命周期。<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3>一个程序(进程)运行时产生了不止一个线程<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3>java实现多线程有2种方式，继承Thread类，或者实现Runnable接口。<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
