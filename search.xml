@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title><![CDATA[谈谈对Spring的IOC与AOP理解]]></title>
+      <url>http://www.huchan.xyz/2017/03/14/%E8%B0%88%E8%B0%88%E5%AF%B9Spring%E7%9A%84IOC%E4%B8%8EAOP%E7%90%86%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>用了SpringMVC框架这么久，结合一些网上的说法，谈谈自己对Spring的IOC与AOP的理解。</p>
+<h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>IOC(Inversion of Controller)：有三种说法控制反转，依赖注入，依赖倒置，而所谓的IOC对于Spring来说就是负责控制对象的生命周期和对象间的关系。</p>
+<h3 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h3><p>打个比方以前我们吃饭都需要去亲自去快餐店或者其他小餐馆去吃饭，还要看下距离远不远，或者其他因素条件。现在有许多的人都开始在美团点外卖了，只需要在美团上注册账号填好地址，点自己想吃的，那么你不需要关心别人是怎么送过来的，有多远，那么美团这个平台会负责帮你把外卖送到你手上。其中美团平台为Spring，它负责帮你把你所需要的东西自动送上门。比如Spring中的Controller与Service，Controller只管业务逻辑，不需要管这个业务做的过程，Spring通过@Resource把你所需涉及的业务(Service)注入到Controller，这也就是依赖注入。Spring依赖注入的实现技术就是反射机制。</p>
+<h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p>AOP(Aspect Oriented Programming)：面向切面编程，java是OOP语言，是一种纵向的扩展，而AOP就是将横向与业务无关的代码逻辑封装起来，目标就是分离关注点。Spring声明事务就用了AOP，在访问数据库时，对于事务的处理与回滚，Spring会主动帮你完成，而你只需要访问数据库。</p>
+<h3 id="个人理解-1"><a href="#个人理解-1" class="headerlink" title="个人理解"></a>个人理解</h3><p>打个比方你和一个美女(帅哥)约会吃饭，出门前，你是不是要想自己打扮的怎么样，穿着怎么样，带够了钱没，然后再出去，而AOP的思想就是，你的打扮有专业的化妆师，穿着有设计师，钱有人帮你付，这些都不需要你考虑，你只需要去吃个饭就行了，这就是AOP思想。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></p>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/14/谈谈对Spring的IOC与AOP理解/">http://www.huchan.xyz/2017/03/14/谈谈对Spring的IOC与AOP理解/</a> </p>
+]]></content>
+      
+        <categories>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 总结 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[单例模式]]></title>
       <url>http://www.huchan.xyz/2017/03/14/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
       <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Singleton是一种创建型模式，指某个类采用Singleton模式，则在这个类被创建后，只可能产生一个实例供外部访问，并且提供一个全局的访问点。</p>
@@ -347,9 +374,9 @@
         
         <tags>
             
-            <tag> Apahce Solr </tag>
-            
             <tag> SpringBoot </tag>
+            
+            <tag> Apahce Solr </tag>
             
         </tags>
         
@@ -376,12 +403,12 @@
 <li>在对其他类的引用上，一个对象对其他对象的引用应当降到最低。</li>
 <li>尽量降低类的访问权限。</li>
 <li>谨慎使用序列化功能。</li>
-<li>不要暴漏类成员，而应该提供相应的访问器（属性）。<h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3>定义对扩展开放，对修改关闭。<h2 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h2>通过抽象（抽象类或接口）使各个类或模块的实现彼此独立，不相互影响，实现模块间的松耦合。</li>
+<li>不要暴漏类成员，而应该提供相应的访问器（属性）。<h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><h3 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h3>定义对扩展开放，对修改关闭。<h2 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h2><h3 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a>定义</h3>通过抽象（抽象类或接口）使各个类或模块的实现彼此独立，不相互影响，实现模块间的松耦合。</li>
 <li>高层模块不应该依赖于底层模块，两者都应该依赖于抽象抽象的类或接口。</li>
 <li>抽象不应该依赖于细节具体实现的类，细节应该依赖抽象。<h3 id="实现-3"><a href="#实现-3" class="headerlink" title="实现"></a>实现</h3></li>
 <li>通过构造函数传递依赖对象传递的参数为抽象类或接口。</li>
 <li>通过setter方法传递依赖对象设置setxxx方法中参数为抽象类或接口。</li>
-<li>接口声明实现依赖对象。<h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><h3 id="定义-4"><a href="#定义-4" class="headerlink" title="定义"></a>定义</h3></li>
+<li>接口声明实现依赖对象。<h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><h3 id="定义-5"><a href="#定义-5" class="headerlink" title="定义"></a>定义</h3></li>
 <li>所有引用基类的地方必须能够透明的使用其子类。</li>
 <li>父类引用的地方子类就能够引用，替换为子类不会产生任何错位或异常，子类替换其父类可能会出现问题。<h3 id="实现-4"><a href="#实现-4" class="headerlink" title="实现"></a>实现</h3>为良好的继承定义一个规范：</li>
 <li>子类必须完全实现父类的方法。</li>
