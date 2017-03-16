@@ -160,9 +160,9 @@
         
         <tags>
             
-            <tag> 学习笔记 </tag>
-            
             <tag> 多线程 </tag>
+            
+            <tag> 学习笔记 </tag>
             
         </tags>
         
@@ -187,7 +187,9 @@
 <li>悲观锁：顾名思义，就是很悲观，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会block直到它拿到传统的关系型数据库里边就用到了很多这种锁机制，比如行锁，表锁等，读锁，写锁等，都是在做操作之前先上锁。</li>
 <li>乐观锁：顾名思义，就是很乐观，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号等机制。乐观锁适用于多读的应用类型，这样可以提高吞吐量，像数据库如果提供类似于write_condition机制的其实都是提供的乐观锁。</li>
 <li>死锁：多个线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。由于线程被无限期地阻塞，因此程序不能正常运行。<h3 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h3></li>
-<li>心跳机制：定时发送一个自定义的结构体(心跳包)，让对方知道自己还活着，以确保连接的有效性的机制。<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3>NPE(java.lang.NullPointerException): 空指针异常。<br>OME(java.lang.OutOfMemoryError)：内存泄漏。<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3></li>
+<li>心跳机制：定时发送一个自定义的结构体(心跳包)，让对方知道自己还活着，以确保连接的有效性的机制。<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3></li>
+<li>NPE(java.lang.NullPointerException): 空指针异常。</li>
+<li>OME(java.lang.OutOfMemoryError)：内存泄漏。<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3></li>
 <li>分布式：一个业务分拆多个子业务，部署在不同的服务器上。</li>
 <li>集群：同一个业务，部署在多个服务器上。</li>
 <li>负载均衡：是分布式系统架构设计中必须考虑的因素之一，它通常是指，将请求/数据【均匀】分摊到多个操作单元上执行，负载均衡的关键在于【均匀】。常见互联网分布式架构如上，分为客户端层、反向代理nginx层、站点层、服务层、数据层。<h3 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h3></li>
@@ -541,6 +543,17 @@
     </entry>
     
     <entry>
+      <title><![CDATA[建站日志!]]></title>
+      <url>http://www.huchan.xyz/log/index.html</url>
+      <content type="html"><![CDATA[<blockquote><ol>
+<li>新增Java编码规范文章。</li>
+<li>优化Java与Web常用名词解释目录结构，增加部分名词解释。</li>
+</ol>
+<footer><strong>2017-03-16</strong></footer></blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
       <content type="html"><![CDATA[<blockquote><p>我叫胡禅，程序猿一枚。从大学毕业陆陆续续实习到工作已经快2年了，感觉自己成长了很多。作为一名计算机专业(哦，非修电脑的)毕业学生，感觉学习的路很长，技术这东西，接触的越深，越感觉自己渺小(菜鸟一个)。永远学不完的知识，技术永远在更新，好学的心却从未改变。始终坚信自己所选择的道路，能带我看到更广阔的世界，站上世界的舞台。我渴望接触更加广阔的平台，接触更多的从事计算机事业大牛(抱抱大腿)。认真对待生活中的细节，让自己的人生更加精致。</p>
@@ -552,17 +565,6 @@
       <title><![CDATA[标签云]]></title>
       <url>http://www.huchan.xyz/tags/index.html</url>
       <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[建站日志!]]></title>
-      <url>http://www.huchan.xyz/log/index.html</url>
-      <content type="html"><![CDATA[<blockquote><ol>
-<li>新增Java编码规范文章。</li>
-<li>优化Java与Web常用名词解释目录结构，增加部分名词解释。</li>
-</ol>
-<footer><strong>2017-03-16</strong></footer></blockquote>
-]]></content>
     </entry>
     
   
