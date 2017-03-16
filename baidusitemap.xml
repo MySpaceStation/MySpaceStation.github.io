@@ -3,6 +3,48 @@
 
     
   <url>
+    <loc>http://www.huchan.xyz/2017/03/16/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2017-03-16T13:25:26.166Z</lastmod>
+    <data>
+        <display>
+        <title>Java编码规范</title>
+        <pubTime>2017-03-16T11:28:48.000Z</pubTime>
+        
+        <tag>总结 </tag>
+         
+        <tag>编码规范 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.huchan.xyz/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.huchan.xyz/2017/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</loc>
+    <lastmod>2017-03-16T12:14:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java与Web中常用名词解释</title>
+        <pubTime>2017-03-13T13:06:19.000Z</pubTime>
+        
+        <tag>学习笔记 </tag>
+         
+         
+           
+             
+              <breadCrumb title="名词解释" url="http://www.huchan.xyz/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.huchan.xyz/2017/03/14/%E8%B0%88%E8%B0%88%E5%AF%B9Spring%E7%9A%84IOC%E4%B8%8EAOP%E7%90%86%E8%A7%A3/</loc>
     <lastmod>2017-03-14T15:56:29.692Z</lastmod>
     <data>
@@ -72,9 +114,9 @@
         <title>单例模式</title>
         <pubTime>2017-03-13T18:06:57.000Z</pubTime>
         
-        <tag>单例模式 </tag>
-         
         <tag>学习笔记 </tag>
+         
+        <tag>单例模式 </tag>
          
          
            
@@ -103,26 +145,6 @@
            
              
               <breadCrumb title="Hibernate Validator" url="http://www.huchan.xyz/categories/Hibernate-Validator/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.huchan.xyz/2017/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</loc>
-    <lastmod>2017-03-13T15:12:49.183Z</lastmod>
-    <data>
-        <display>
-        <title>java与web中常用名词解释</title>
-        <pubTime>2017-03-13T13:06:19.000Z</pubTime>
-        
-        <tag>学习笔记 </tag>
-         
-         
-           
-             
-              <breadCrumb title="名词解释" url="http://www.huchan.xyz/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
           
         </display>
     </data>
@@ -210,9 +232,9 @@
         <title>SpringBoot集成Solr</title>
         <pubTime>2017-03-11T02:40:53.000Z</pubTime>
         
-        <tag>SpringBoot </tag>
-         
         <tag>Apahce Solr </tag>
+         
+        <tag>SpringBoot </tag>
          
          
            

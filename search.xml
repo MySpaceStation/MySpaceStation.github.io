@@ -4,6 +4,65 @@
   
     
     <entry>
+      <title><![CDATA[Java编码规范]]></title>
+      <url>http://www.huchan.xyz/2017/03/16/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文参考了《代码整洁之道》与《阿里巴巴Java开发手册》，总结一些Java的编程规范，目录参考《阿里巴巴Java开发手册》！</p>
+<h2 id="编程规约"><a href="#编程规约" class="headerlink" title="编程规约"></a>编程规约</h2><h3 id="命名规约"><a href="#命名规约" class="headerlink" title="命名规约"></a>命名规约</h3><ul>
+<li>包名：开头一般以com/cn.组织机构(alibaba)/个人(hc)，所有模块应放在此包名下，新建包名为名词全小写且以模块划分，如：com.hc，新建包名system。</li>
+<li>类名：类名和对象名为名词或名词短语，遵从UpperCamelCase风格，如Customer，CustomerController。领域模型(DO、BO、DTO、VO、QO等)命名规约为UpperCamelCase风格 + 领域模型，如CustomerVO。</li>
+<li>变量名：名词或名词短语，遵从lowerCamelCase风格，如customer，customerService。</li>
+<li>常量名：全大写，单个英语单词下划线隔开，如MAX_SOCKET_COUNT。</li>
+<li>方法名：动词或动词短语，遵从lowerCamelCase风格，如save，postPayment。</li>
+<li>接口名：定义接口以I+xx，实现接口xx+Impl，如ICustomerService，customerServiceImpl。<h3 id="函数规约"><a href="#函数规约" class="headerlink" title="函数规约"></a>函数规约</h3></li>
+<li>尽量遵循单一职责。</li>
+<li>返回值为boolean类型，以is开头。</li>
+<li>函数尽量短小，20行封顶最佳。</li>
+<li>尽量使用一元函数。</li>
+<li>尽量避免三参数或者三个以上的参数。</li>
+<li>出现三参数以上情况，可以考虑封装为类。</li>
+<li>每个函数应该只有一个入口和出口。</li>
+<li>每个函数只该有一个return函数。</li>
+<li>尽量编写少的工具类。</li>
+<li>尽量使用架构自带的API。<h3 id="注释规约"><a href="#注释规约" class="headerlink" title="注释规约"></a>注释规约</h3></li>
+<li>尽量英文注释。</li>
+<li>精炼易懂的语句。</li>
+<li>每个代码块入口的参数，需要给出详细注释。</li>
+<li>对于可能出现的异常，给出@thrwos注释。</li>
+<li>对于过时的方法，给出@deprecated。<h3 id="可读性"><a href="#可读性" class="headerlink" title="可读性"></a>可读性</h3></li>
+<li>自顶向下读代码：向下规则。</li>
+<li>长而具有描述性的名称比短而令人费解的名称好。</li>
+<li>使用异常替代返回错误码，新的异常可以继承Error枚举类。</li>
+<li>抽离try/catch代码块，避免错误处理与正常流程混为一谈。</li>
+<li>错误处理只做一件事。</li>
+<li>循环中尽量避免break、continue。</li>
+<li>通过所有测试。</li>
+<li>消除重复和提高表达能力，提早构建简单对象。</li>
+<li>字母’I’和’O’尽量避免与数字混用。<h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3></li>
+<li>每个函数模块尽量给出单元测试用例。</li>
+<li>对于整个流程给出单元测试用例。</li>
+<li>验收测试需要测试每个单元测试，站在客户角度考虑可能出现的情况的整套流程测试。<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
+</ul>
+<p>文章链接 <a href="http://www.huchan.xyz/2017/03/16/编码规范/">http://www.huchan.xyz/2017/03/16/编码规范/</a> </p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 总结 </tag>
+            
+            <tag> 编码规范 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[谈谈对Spring的IOC与AOP理解]]></title>
       <url>http://www.huchan.xyz/2017/03/14/%E8%B0%88%E8%B0%88%E5%AF%B9Spring%E7%9A%84IOC%E4%B8%8EAOP%E7%90%86%E8%A7%A3/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>用了SpringMVC框架这么久，结合一些网上的说法，谈谈自己对Spring的IOC与AOP的理解。</p>
@@ -57,9 +116,9 @@
         
         <tags>
             
-            <tag> 单例模式 </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> 单例模式 </tag>
             
         </tags>
         
@@ -110,10 +169,10 @@
     </entry>
     
     <entry>
-      <title><![CDATA[java与web中常用名词解释]]></title>
+      <title><![CDATA[Java与Web中常用名词解释]]></title>
       <url>http://www.huchan.xyz/2017/03/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文持续更新，用于收录一些计算机中遇到的常用名词。</p>
-<h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><ul>
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="领域模型"><a href="#领域模型" class="headerlink" title="领域模型"></a>领域模型</h3><ul>
 <li>VO(Value Object)： 值对象，用new关键字创建，由GC回收的，存活在业务层的，是业务逻辑使用的，它存活的目的就是为数据提供一个生存的地方。</li>
 <li>PO(Persisent Object)：持久对象，向数据库中添加新数据时创建，删除数据库中数据时消除。并且它只能存活在一个数据库连接中，断开连接即被销毁。</li>
 <li>DO(Domain Object)：领域对象，就是从现实世界中抽象出来的有形或无形的业务实体。</li>
@@ -123,15 +182,16 @@
 <li>QO(Query Object)：查询对象。</li>
 <li>POJO(Plain Ordinary Java Object)：简单无规则java对象，在一些ORM中能够做到维护数据库表记录的PO完全是一个符合java Bean规范的纯java对象，只有属性字段及setter和getter方法,用于输出自身数据的toString方法，没有增加别的属性和方法。</li>
 <li>DAO(Data Access Object)：数据访问对象，是一个sun的一个标准j2ee设计模式，这个模式中有个接口就是DAO，它负持久层的操作。为业务层提供接口。此对象用于访问数据库。通常和PO结合使用，DAO中包含了各种数据库的操作方法。通过它的方法，结合PO对数据库进行相关的操作。夹在业务逻辑与数据库资源中间。配合VO, 提供数据库的CRUD操作。</li>
-<li>ORM(Object Relational Mapping)：对象关系映射，可以生成所有的关于对象保存，删除，读取的SQL语句。</li>
-<li>心跳机制：定时发送一个自定义的结构体(心跳包)，让对方知道自己还活着，以确保连接的有效性的机制。</li>
+<li>ORM(Object Relational Mapping)：对象关系映射，可以生成所有的关于对象保存，删除，读取的SQL语句。<img src="/article_source/note/img/domain.png" class="领域模型图" title="领域模型图">
+<h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3></li>
 <li>悲观锁：顾名思义，就是很悲观，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会block直到它拿到传统的关系型数据库里边就用到了很多这种锁机制，比如行锁，表锁等，读锁，写锁等，都是在做操作之前先上锁。</li>
 <li>乐观锁：顾名思义，就是很乐观，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号等机制。乐观锁适用于多读的应用类型，这样可以提高吞吐量，像数据库如果提供类似于write_condition机制的其实都是提供的乐观锁。</li>
-<li>死锁：多个线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。由于线程被无限期地阻塞，因此程序不能正常运行。<h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2></li>
+<li>死锁：多个线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。由于线程被无限期地阻塞，因此程序不能正常运行。<h3 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h3></li>
+<li>心跳机制：定时发送一个自定义的结构体(心跳包)，让对方知道自己还活着，以确保连接的有效性的机制。<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3>NPE(java.lang.NullPointerException): 空指针异常。<br>OME(java.lang.OutOfMemoryError)：内存泄漏。<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3></li>
 <li>分布式：一个业务分拆多个子业务，部署在不同的服务器上。</li>
 <li>集群：同一个业务，部署在多个服务器上。</li>
-<li>负载均衡：是分布式系统架构设计中必须考虑的因素之一，它通常是指，将请求/数据【均匀】分摊到多个操作单元上执行，负载均衡的关键在于【均匀】。常见互联网分布式架构如上，分为客户端层、反向代理nginx层、站点层、服务层、数据层。<h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><img src="/article_source/note/img/domain.png" class="验证测试图" title="验证测试图">
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
+<li>负载均衡：是分布式系统架构设计中必须考虑的因素之一，它通常是指，将请求/数据【均匀】分摊到多个操作单元上执行，负载均衡的关键在于【均匀】。常见互联网分布式架构如上，分为客户端层、反向代理nginx层、站点层、服务层、数据层。<h3 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h3></li>
+<li>GAV(GroupId ArtifactctId Version)：Maven 坐标，是用来唯一标识 jar 包。<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><em>以上为博主整理原创，欢迎反馈问题，转载请附带出处。</em></li>
 </ul>
 <p>文章链接 <a href="http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/">http://www.huchan.xyz/2017/03/13/计算机中常用名词解释/</a> </p>
 ]]></content>
@@ -374,9 +434,9 @@
         
         <tags>
             
-            <tag> SpringBoot </tag>
-            
             <tag> Apahce Solr </tag>
+            
+            <tag> SpringBoot </tag>
             
         </tags>
         
