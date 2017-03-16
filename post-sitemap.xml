@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://www.huchan.xyz/2017/03/12/uml%E7%B1%BB%E5%9B%BE/</loc>
+        <lastmod>2017-03-16T14:18:42.246Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.huchan.xyz/2017/03/14/%E8%B0%88%E8%B0%88%E5%AF%B9Spring%E7%9A%84IOC%E4%B8%8EAOP%E7%90%86%E8%A7%A3/</loc>
         <lastmod>2017-03-16T13:32:20.334Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -73,14 +81,6 @@
     <url>
         <loc>http://www.huchan.xyz/2017/03/13/SpringBoot%E5%AE%9E%E7%8E%B0Validator%E5%9B%BD%E9%99%85%E5%8C%96/</loc>
         <lastmod>2017-03-13T14:32:06.864Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://www.huchan.xyz/2017/03/12/uml%E7%B1%BB%E5%9B%BE/</loc>
-        <lastmod>2017-03-13T14:31:23.088Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

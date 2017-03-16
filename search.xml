@@ -160,9 +160,9 @@
         
         <tags>
             
-            <tag> 多线程 </tag>
-            
             <tag> 学习笔记 </tag>
+            
+            <tag> 多线程 </tag>
             
         </tags>
         
@@ -543,21 +543,21 @@
     </entry>
     
     <entry>
-      <title><![CDATA[建站日志!]]></title>
-      <url>http://www.huchan.xyz/log/index.html</url>
-      <content type="html"><![CDATA[<blockquote><ol>
-<li>新增Java编码规范文章。</li>
-<li>优化Java与Web常用名词解释目录结构，增加部分名词解释。</li>
-</ol>
-<footer><strong>2017-03-16</strong></footer></blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[细节是生活的意境，精致是生活的姿态！]]></title>
       <url>http://www.huchan.xyz/about/index.html</url>
       <content type="html"><![CDATA[<blockquote><p>我叫胡禅，程序猿一枚。从大学毕业陆陆续续实习到工作已经快2年了，感觉自己成长了很多。作为一名计算机专业(哦，非修电脑的)毕业学生，感觉学习的路很长，技术这东西，接触的越深，越感觉自己渺小(菜鸟一个)。永远学不完的知识，技术永远在更新，好学的心却从未改变。始终坚信自己所选择的道路，能带我看到更广阔的世界，站上世界的舞台。我渴望接触更加广阔的平台，接触更多的从事计算机事业大牛(抱抱大腿)。认真对待生活中的细节，让自己的人生更加精致。</p>
 <footer><strong>胡禅</strong><cite><a href="http://www.huchan.xyz">www.huchan.xyz</a></cite></footer></blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[建站日志!]]></title>
+      <url>http://www.huchan.xyz/log/index.html</url>
+      <content type="html"><![CDATA[<blockquote><ol>
+<li>新增<a href="/2017/03/16/编码规范/" title="Java编码规范">Java编码规范</a>。</li>
+<li>优化<a href="/2017/03/13/计算机中常用名词解释/" title="Java与Web常用名词解释">Java与Web常用名词解释</a>目录结构，增加部分名词解释。</li>
+</ol>
+<footer><strong>2017-03-16</strong></footer></blockquote>
 ]]></content>
     </entry>
     

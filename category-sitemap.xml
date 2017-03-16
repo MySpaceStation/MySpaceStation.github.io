@@ -14,13 +14,6 @@
     </url>
 
     <url>
-        <loc>http://www.huchan.xyz/categories/UML/</loc>
-        <lastmod>2017-03-13T14:31:23.088Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.huchan.xyz/categories/Webservice/</loc>
         <lastmod>2017-03-13T14:33:46.104Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -65,6 +58,13 @@
     <url>
         <loc>http://www.huchan.xyz/categories/Spring/</loc>
         <lastmod>2017-03-16T13:32:20.334Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.huchan.xyz/categories/UML/</loc>
+        <lastmod>2017-03-16T14:18:42.246Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
